@@ -2,590 +2,418 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  
-  <!-- Primary SEO Meta Tags -->
-  <title>Routine. Roasting | Premium Waffle & Specialty Coffee Beşiktaş</title>
-  <meta name="title" content="Routine. Roasting | Premium Waffle & Specialty Coffee Beşiktaş">
-  <meta name="description" content="Beşiktaş'ta premium waffle, waffle bowl, tatlı ve specialty coffee deneyimini keşfedin. Routine. Roasting menüsüne göz atın ve online sipariş verin.">
-  
-  <!-- Open Graph / Social Media -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://routineroasting.com/">
-  <meta property="og:title" content="Routine. Roasting | Tatlı rutininiz yeni başlıyor.">
-  <meta property="og:description" content="Beşiktaş merkezli premium waffle, waffle bowls ve specialty coffee markası.">
 
-  <!-- Typography: Cormorant Garamond & Manrope -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Routine Roasting | Premium Waffle & Specialty Coffee</title>
+
+  <meta
+    name="description"
+    content="Routine Roasting – Beşiktaş'ta premium waffle, waffle bowl, tatlı ve specialty coffee deneyimi."
+  >
+
+  <meta name="theme-color" content="#171513">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
-    /* ==========================================================================
-       1. DESIGN SYSTEM VARIABLES & RESET
-       ========================================================================== */
-    :root {
-      --bg-primary: #F6F1E8;
-      --bg-secondary: #EDE4D6;
-      --bg-pure: #FBF9F5;
-      --text-primary: #171513;
-      --text-secondary: #5C554D;
-      --text-muted: #8E8478;
-      --warm-brown: #3A2C22;
-      --accent-beige: #B8A58B;
-      --subtle-gold: #B69A68;
-      --border-subtle: rgba(23, 21, 19, 0.08);
-      --border-medium: rgba(23, 21, 19, 0.16);
 
-      --font-serif: 'Cormorant Garamond', Georgia, serif;
-      --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* =========================================================
+       RESET
+    ========================================================= */
 
-      --radius-sm: 4px;
-      --radius-md: 8px;
-      --radius-lg: 16px;
-
-      --container-max: 1280px;
-      --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    *, *::before, *::after {
+    * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      -webkit-tap-highlight-color: transparent;
     }
 
     html {
       scroll-behavior: smooth;
-      font-size: 16px;
-      background-color: var(--bg-primary);
-      color: var(--text-primary);
     }
 
     body {
-      font-family: var(--font-sans);
-      font-size: 1rem;
+      font-family: "Manrope", sans-serif;
+      background: #f6f1e8;
+      color: #171513;
       line-height: 1.6;
-      font-weight: 400;
-      background-color: var(--bg-primary);
-      color: var(--text-primary);
-      overflow-x: hidden;
-      padding-bottom: 72px; /* For mobile sticky CTA */
-    }
-
-    @media (min-width: 992px) {
-      body {
-        padding-bottom: 0;
-      }
     }
 
     img {
-      max-width: 100%;
-      height: auto;
       display: block;
-      object-fit: cover;
+      width: 100%;
     }
 
     a {
       color: inherit;
       text-decoration: none;
-      transition: var(--transition-smooth);
     }
 
     button {
-      font-family: inherit;
-      cursor: pointer;
-      border: none;
-      background: none;
+      font: inherit;
     }
 
     .container {
-      width: 100%;
-      max-width: var(--container-max);
+      width: min(1180px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 0 1.25rem;
     }
 
-    @media (min-width: 768px) {
-      .container {
-        padding: 0 2.5rem;
-      }
+    /* =========================================================
+       VARIABLES
+    ========================================================= */
+
+    :root {
+      --cream: #f6f1e8;
+      --cream-dark: #ede4d6;
+      --white: #fffdf9;
+      --brown: #171513;
+      --brown-soft: #5c554d;
+      --gold: #b58a54;
+      --line: rgba(23, 21, 19, 0.12);
+      --shadow: 0 18px 50px rgba(23, 21, 19, 0.10);
     }
 
-    /* Sub-tags & Labels */
-    .eyebrow {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--text-secondary);
-      margin-bottom: 0.75rem;
-      display: inline-block;
-    }
+    /* =========================================================
+       HEADER
+    ========================================================= */
 
-    /* ==========================================================================
-       2. HEADER & NAVIGATION
-       ========================================================================== */
-    .site-header {
+    .header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background-color: rgba(246, 241, 232, 0.95);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-subtle);
-      transition: var(--transition-smooth);
+      z-index: 1000;
+      background: rgba(246, 241, 232, 0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
     }
 
-    .header-inner {
+    .nav {
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 68px;
+      gap: 30px;
     }
 
     .logo {
-      font-family: var(--font-serif);
-      font-size: 1.65rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: var(--text-primary);
-    }
-
-    .logo span {
-      color: var(--subtle-gold);
-    }
-
-    .nav-desktop {
-      display: none;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .nav-desktop a {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      letter-spacing: 0.02em;
-    }
-
-    .nav-desktop a:hover {
-      color: var(--text-primary);
-    }
-
-    .header-actions {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      font-size: 20px;
     }
 
-    .btn-header-order {
-      display: none;
-      padding: 0.6rem 1.25rem;
-      background-color: var(--text-primary);
-      color: var(--bg-pure);
-      font-size: 0.825rem;
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--brown);
+      color: var(--cream);
+      display: grid;
+      place-items: center;
+      font-family: Georgia, serif;
+      font-size: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 14px;
       font-weight: 600;
-      letter-spacing: 0.05em;
-      border-radius: var(--radius-sm);
     }
 
-    .btn-header-order:hover {
-      background-color: var(--warm-brown);
+    .nav-links a {
+      transition: opacity 0.2s ease;
     }
 
-    .menu-toggle {
+    .nav-links a:hover {
+      opacity: 0.55;
+    }
+
+    .nav-order {
+      padding: 12px 18px;
+      background: var(--brown);
+      color: var(--cream);
+      border-radius: 999px;
+    }
+
+    .mobile-menu {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 760px;
+      display: grid;
+      align-items: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(23,21,19,0.92) 0%,
+          rgba(23,21,19,0.72) 42%,
+          rgba(23,21,19,0.20) 100%
+        ),
+        url("https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1800&q=85")
+        center / cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 720px;
+      padding: 100px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: #d8b887;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(60px, 8vw, 108px);
+      line-height: 0.88;
+      font-weight: 600;
+      letter-spacing: -0.05em;
+      margin-bottom: 28px;
+    }
+
+    .hero p {
+      max-width: 560px;
+      color: rgba(255,255,255,0.84);
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+
+    .hero-buttons {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 5px;
-      width: 32px;
-      height: 32px;
-      padding: 4px;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
-    .menu-toggle span {
-      display: block;
-      width: 100%;
-      height: 1.5px;
-      background-color: var(--text-primary);
-      transition: var(--transition-smooth);
-    }
-
-    /* Mobile Drawer */
-    .mobile-drawer {
-      position: fixed;
-      top: 68px;
-      left: 0;
-      width: 100%;
-      height: calc(100vh - 68px);
-      background-color: var(--bg-pure);
-      padding: 2.5rem 1.5rem;
-      transform: translateY(-100%);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      z-index: 99;
-    }
-
-    .mobile-drawer.active {
-      transform: translateY(0);
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .mobile-nav-links {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .mobile-nav-links a {
-      font-family: var(--font-serif);
-      font-size: 1.75rem;
-      font-weight: 500;
-      color: var(--text-primary);
-    }
-
-    .mobile-nav-links a.active {
-      color: var(--subtle-gold);
-    }
-
-    .mobile-drawer-footer {
-      padding-top: 2rem;
-      border-top: 1px solid var(--border-subtle);
-    }
-
-    @media (min-width: 992px) {
-      .nav-desktop { display: flex; }
-      .btn-header-order { display: inline-flex; }
-      .menu-toggle { display: none; }
-      .mobile-drawer { display: none; }
-    }
-
-    /* ==========================================================================
-       3. BUTTONS & UI ELEMENTS
-       ========================================================================== */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.95rem 1.75rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      border-radius: var(--radius-sm);
-      text-align: center;
-      transition: var(--transition-smooth);
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 14px;
+      transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
     }
 
     .btn-primary {
-      background-color: var(--text-primary);
-      color: var(--bg-pure);
+      background: #fff;
+      color: var(--brown);
     }
 
-    .btn-primary:hover {
-      background-color: var(--warm-brown);
-      transform: translateY(-1px);
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.45);
+      color: white;
     }
 
-    .btn-secondary {
-      background-color: transparent;
-      color: var(--text-primary);
-      border: 1px solid var(--border-medium);
+    /* =========================================================
+       INTRO
+    ========================================================= */
+
+    .intro {
+      padding: 110px 0;
     }
 
-    .btn-secondary:hover {
-      background-color: rgba(23, 21, 19, 0.04);
-      border-color: var(--text-primary);
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
     }
 
-    .btn-trendyol {
-      background-color: #F27A1A;
-      color: #FFFFFF;
-      font-weight: 700;
-    }
-
-    .btn-trendyol:hover {
-      background-color: #D96509;
-      transform: translateY(-1px);
-    }
-
-    .btn-block {
-      width: 100%;
-    }
-
-    /* ==========================================================================
-       4. HERO SECTION (Mobile-First)
-       ========================================================================== */
-    .hero-section {
-      padding: 2.5rem 0 3.5rem;
-      position: relative;
-    }
-
-    .hero-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .hero-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .hero-title {
-      font-family: var(--font-serif);
-      font-size: clamp(2.4rem, 7vw, 4.2rem);
-      line-height: 1.08;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.25rem;
-      color: var(--text-primary);
-    }
-
-    .hero-description {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      color: var(--text-secondary);
-      margin-bottom: 2rem;
-      max-width: 480px;
-    }
-
-    .hero-cta-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .hero-visual {
-      position: relative;
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      aspect-ratio: 4/5;
-      background-color: var(--bg-secondary);
-    }
-
-    .hero-visual img {
-      width: 100%;
-      height: 100%;
+    .intro-image {
+      height: 620px;
       object-fit: cover;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      border-radius: 4px;
     }
 
-    .hero-visual:hover img {
-      transform: scale(1.02);
-    }
-
-    @media (min-width: 576px) {
-      .hero-cta-group {
-        flex-direction: row;
-        align-items: center;
-      }
-      .hero-cta-group .btn {
-        width: auto;
-      }
-    }
-
-    @media (min-width: 992px) {
-      .hero-section {
-        padding: 4.5rem 0 5rem;
-      }
-      .hero-grid {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 4.5rem;
-        align-items: center;
-      }
-    }
-
-    /* ==========================================================================
-       5. CONCEPT / MANIFESTO SECTION
-       ========================================================================== */
-    .concept-section {
-      padding: 3.5rem 0;
-      background-color: var(--bg-pure);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-      text-align: center;
-    }
-
-    .concept-inner {
-      max-width: 680px;
-      margin: 0 auto;
-    }
-
-    .concept-title {
-      font-family: var(--font-serif);
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      line-height: 1.2;
-      font-weight: 500;
-      margin-bottom: 1.25rem;
-    }
-
-    .concept-text {
-      font-size: 1.05rem;
-      line-height: 1.7;
-      color: var(--text-secondary);
-      font-weight: 300;
-    }
-
-    /* ==========================================================================
-       6. FEATURED PRODUCTS (FAVORİLERİMİZ)
-       ========================================================================== */
-    .section-header {
-      margin-bottom: 2rem;
-      display: flex;
-      flex-direction: column;
-    }
-
+    .intro-copy h2,
     .section-title {
-      font-family: var(--font-serif);
-      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(48px, 6vw, 78px);
+      line-height: 0.95;
       font-weight: 600;
-      line-height: 1.15;
+      letter-spacing: -0.04em;
     }
+
+    .intro-copy p {
+      margin-top: 28px;
+      color: var(--brown-soft);
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .intro-note {
+      margin-top: 30px;
+      padding-top: 25px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* =========================================================
+       SECTION HEADER
+    ========================================================= */
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-header {
+      margin-bottom: 55px;
+    }
+
+    .section-header .eyebrow {
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .section-description {
+      max-width: 600px;
+      margin-top: 18px;
+      color: var(--brown-soft);
+    }
+
+    /* =========================================================
+       PRODUCTS
+    ========================================================= */
 
     .products-section {
-      padding: 4rem 0;
+      background: var(--white);
     }
 
-    /* Clean, Editorial Product Grid */
     .product-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    @media (min-width: 576px) {
-      .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-      }
-    }
-
-    @media (min-width: 992px) {
-      .product-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
-      }
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
 
     .product-card {
-      background-color: transparent;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .product-image-wrap {
-      position: relative;
-      aspect-ratio: 1/1;
-      border-radius: var(--radius-sm);
+      background: var(--cream);
       overflow: hidden;
-      background-color: var(--bg-secondary);
-      margin-bottom: 1rem;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
-    .product-image-wrap img {
-      width: 100%;
-      height: 100%;
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .product-image {
+      aspect-ratio: 1 / 1;
       object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-
-    .product-card:hover .product-image-wrap img {
-      transform: scale(1.03);
-    }
-
-    .product-badge {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background-color: rgba(251, 249, 245, 0.92);
-      color: var(--text-primary);
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 4px 8px;
-      border-radius: 2px;
     }
 
     .product-info {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
+      padding: 22px;
     }
 
     .product-name-row {
       display: flex;
+      align-items: flex-start;
       justify-content: space-between;
-      align-items: baseline;
-      gap: 0.5rem;
-      margin-bottom: 0.35rem;
+      gap: 15px;
     }
 
     .product-name {
-      font-family: var(--font-serif);
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--text-primary);
+      font-size: 18px;
+      line-height: 1.25;
+      font-weight: 800;
     }
 
     .product-price {
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--warm-brown);
       white-space: nowrap;
+      font-weight: 800;
+      color: var(--brown);
     }
 
     .product-desc {
-      font-size: 0.85rem;
-      line-height: 1.5;
-      color: var(--text-secondary);
+      margin-top: 10px;
+      color: var(--brown-soft);
+      font-size: 13px;
+      line-height: 1.7;
     }
 
-    /* ==========================================================================
-       7. MENU CATEGORIES SECTION
-       ========================================================================== */
-    .categories-section {
-      padding: 4rem 0;
-      background-color: var(--bg-secondary);
+    .product-tag {
+      display: inline-block;
+      margin-bottom: 13px;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: var(--gold);
     }
+
+    /* =========================================================
+       CATEGORY NAVIGATION
+    ========================================================= */
 
     .category-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
-    }
-
-    @media (min-width: 768px) {
-      .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 992px) {
-      .category-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
     .category-card {
       position: relative;
-      border-radius: var(--radius-sm);
+      min-height: 360px;
       overflow: hidden;
-      aspect-ratio: 4/5;
-      background-color: var(--warm-brown);
       display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 1.5rem;
-      color: var(--bg-pure);
+      align-items: flex-end;
+      padding: 28px;
+      color: white;
+      background: var(--brown);
+    }
+
+    .category-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.78),
+        rgba(0,0,0,0.05)
+      );
+      z-index: 1;
     }
 
     .category-card img {
@@ -594,958 +422,1605 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.72;
-      transition: transform 0.5s ease, opacity 0.5s ease;
+      transition: transform 0.5s ease;
     }
 
     .category-card:hover img {
-      transform: scale(1.04);
-      opacity: 0.6;
+      transform: scale(1.05);
     }
 
-    .category-card-content {
+    .category-content {
       position: relative;
       z-index: 2;
     }
 
-    .category-card-title {
-      font-family: var(--font-serif);
-      font-size: 1.6rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-      color: #FFFFFF;
+    .category-content h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 42px;
+      line-height: 1;
+      margin-bottom: 8px;
     }
 
-    .category-card-subtitle {
-      font-size: 0.8rem;
-      color: rgba(255, 255, 255, 0.85);
-      font-weight: 400;
+    .category-content p {
+      color: rgba(255,255,255,0.78);
+      font-size: 13px;
     }
 
-    /* ==========================================================================
-       8. COFFEE & RITUAL SECTION
-       ========================================================================== */
+    /* =========================================================
+       COFFEE
+    ========================================================= */
+
     .coffee-section {
-      padding: 4.5rem 0;
+      background: var(--cream-dark);
     }
 
     .coffee-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
-    }
-
-    .coffee-visual {
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      aspect-ratio: 4/5;
-      background-color: var(--bg-secondary);
-    }
-
-    .coffee-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .coffee-text {
-      font-size: 1.05rem;
-      line-height: 1.7;
-      color: var(--text-secondary);
-      margin-bottom: 2rem;
-    }
-
-    @media (min-width: 992px) {
-      .coffee-grid {
-        display: grid;
-        grid-template-columns: 0.9fr 1.1fr;
-        gap: 4.5rem;
-        align-items: center;
-      }
-    }
-
-    /* ==========================================================================
-       9. BRAND VALUES / QUALITY
-       ========================================================================== */
-    .quality-section {
-      padding: 3.5rem 0;
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-      background-color: var(--bg-pure);
-    }
-
-    .quality-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
     }
 
-    @media (min-width: 768px) {
-      .quality-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
-      }
+    .coffee-card {
+      background: var(--white);
+      padding: 26px;
+      border: 1px solid var(--line);
     }
 
-    .quality-item {
-      display: flex;
-      flex-direction: column;
+    .coffee-card h3 {
+      font-size: 17px;
+      margin-bottom: 7px;
     }
 
-    .quality-item-num {
-      font-family: var(--font-serif);
-      font-size: 1.1rem;
-      color: var(--subtle-gold);
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+    .coffee-card p {
+      color: var(--brown-soft);
+      font-size: 12px;
+      min-height: 48px;
     }
 
-    .quality-item-title {
-      font-family: var(--font-serif);
-      font-size: 1.35rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
+    .coffee-price {
+      display: block;
+      margin-top: 20px;
+      font-weight: 800;
+      font-size: 16px;
     }
 
-    .quality-item-text {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
+    /* =========================================================
+       ORDER CTA
+    ========================================================= */
 
-    /* ==========================================================================
-       10. ONLINE ORDERING SECTION (Trendyol Primary)
-       ========================================================================== */
     .order-section {
-      padding: 4.5rem 0;
-      background-color: var(--bg-primary);
+      padding: 120px 0;
+      background: var(--brown);
+      color: white;
+    }
+
+    .order-card {
+      max-width: 850px;
+      margin: 0 auto;
       text-align: center;
     }
 
-    .order-card-box {
-      max-width: 640px;
-      margin: 0 auto;
-      background-color: var(--bg-pure);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2.5rem 1.5rem;
+    .order-card .eyebrow {
+      color: #d8b887;
     }
 
-    @media (min-width: 768px) {
-      .order-card-box {
-        padding: 3.5rem 2.5rem;
-      }
-    }
-
-    .order-title {
-      font-family: var(--font-serif);
-      font-size: clamp(2rem, 5vw, 2.75rem);
+    .order-card h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(50px, 7vw, 85px);
+      line-height: 0.95;
       font-weight: 600;
-      margin-bottom: 0.75rem;
     }
 
-    .order-desc {
-      font-size: 1rem;
-      color: var(--text-secondary);
-      margin-bottom: 2rem;
+    .order-card p {
+      max-width: 620px;
+      margin: 25px auto 35px;
+      color: rgba(255,255,255,0.7);
     }
 
     .order-buttons {
       display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-      margin-bottom: 1.75rem;
-    }
-
-    .secondary-order-platforms {
-      display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--text-secondary);
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
-    .secondary-order-platforms a:hover {
-      color: var(--text-primary);
-      text-decoration: underline;
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact {
+      padding: 100px 0;
+      background: var(--white);
     }
 
-    /* ==========================================================================
-       11. FOOTER
-       ========================================================================== */
-    .site-footer {
-      background-color: var(--warm-brown);
-      color: var(--bg-pure);
-      padding: 3.5rem 0 2rem;
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+    }
+
+    .contact-info {
+      display: grid;
+      gap: 24px;
+      margin-top: 35px;
+    }
+
+    .contact-item {
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-label {
+      display: block;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .contact-value {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .map-placeholder {
+      min-height: 450px;
+      background:
+        linear-gradient(
+          rgba(23,21,19,0.2),
+          rgba(23,21,19,0.2)
+        ),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80")
+        center / cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .map-box {
+      background: rgba(255,253,249,0.94);
+      padding: 25px 35px;
+      text-align: center;
+    }
+
+    .map-box strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .map-box span {
+      color: var(--brown-soft);
+      font-size: 13px;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    .footer {
+      background: #0e0d0c;
+      color: white;
+      padding: 70px 0 30px;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-      margin-bottom: 3rem;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
     }
 
-    @media (min-width: 768px) {
-      .footer-grid {
-        grid-template-columns: 2fr 1fr 1fr;
-      }
+    .footer-brand {
+      max-width: 420px;
     }
 
-    .footer-brand h3 {
-      font-family: var(--font-serif);
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+    .footer-brand h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 52px;
+      line-height: 1;
+      margin-bottom: 20px;
     }
 
     .footer-brand p {
-      font-size: 0.9rem;
-      color: var(--accent-beige);
-      max-width: 320px;
+      color: rgba(255,255,255,0.58);
+      font-size: 14px;
+      line-height: 1.8;
     }
 
-    .footer-col h4 {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
+    .footer-column h3 {
+      font-size: 12px;
       text-transform: uppercase;
-      color: var(--accent-beige);
-      margin-bottom: 1rem;
+      letter-spacing: 0.13em;
+      margin-bottom: 18px;
+      color: #d8b887;
     }
 
-    .footer-col ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .footer-col a {
-      font-size: 0.9rem;
-      color: var(--bg-pure);
-      opacity: 0.8;
-    }
-
-    .footer-col a:hover {
-      opacity: 1;
-      color: #FFFFFF;
+    .footer-column a {
+      display: block;
+      margin-bottom: 10px;
+      color: rgba(255,255,255,0.68);
+      font-size: 14px;
     }
 
     .footer-bottom {
-      padding-top: 1.75rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
       display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      font-size: 0.8rem;
-      color: var(--accent-beige);
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 25px;
+      color: rgba(255,255,255,0.4);
+      font-size: 12px;
     }
 
-    @media (min-width: 768px) {
-      .footer-bottom {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    }
+    /* =========================================================
+       MOBILE
+    ========================================================= */
 
-    /* ==========================================================================
-       12. MOBILE FIXED STICKY BOTTOM BAR
-       ========================================================================== */
-    .mobile-sticky-cta {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(251, 249, 245, 0.96);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border-top: 1px solid var(--border-subtle);
-      padding: 0.75rem 1.25rem;
-      z-index: 90;
-      display: flex;
-      gap: 0.75rem;
-    }
+    @media (max-width: 900px) {
 
-    @media (min-width: 992px) {
-      .mobile-sticky-cta {
+      .nav-links {
         display: none;
       }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .hero {
+        min-height: 680px;
+      }
+
+      .intro-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-image {
+        height: 450px;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .coffee-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .nav {
+        min-height: 68px;
+      }
+
+      .hero {
+        min-height: 650px;
+      }
+
+      .hero-content {
+        padding: 70px 0;
+      }
+
+      .hero h1 {
+        font-size: 64px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .section,
+      .intro,
+      .contact {
+        padding: 75px 0;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .coffee-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .category-card {
+        min-height: 300px;
+      }
+    }
+
   </style>
 </head>
+
 <body>
 
-  <!-- ==========================================================================
+  <!-- =======================================================
        HEADER
-       ========================================================================== -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#" class="logo" aria-label="Routine Roasting Ana Sayfa">
-        Routine<span>.</span> Roasting
+  ======================================================== -->
+
+  <header class="header">
+    <div class="container nav">
+
+      <a href="#home" class="logo">
+        <span class="logo-mark">R</span>
+        <span>ROUTINE ROASTING</span>
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="nav-desktop">
-        <a href="#menu">Menü</a>
-        <a href="#concept">Konsept</a>
+      <nav class="nav-links">
+        <a href="#home">Ana Sayfa</a>
+        <a href="#products">Menü</a>
         <a href="#coffee">Kahve</a>
-        <a href="#quality">Hakkımızda</a>
-        <a href="#order">İletişim</a>
+        <a href="#about">Hakkımızda</a>
+        <a href="#contact">İletişim</a>
+        <a href="#order" class="nav-order">Sipariş Ver</a>
       </nav>
 
-      <div class="header-actions">
-        <a href="https://www.trendyol.com/yemek" target="_blank" rel="noopener" class="btn-header-order">
-          Online Sipariş Ver
-        </a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Menüyü Aç/Kapat">
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+      <button
+        class="mobile-menu"
+        aria-label="Menüyü aç"
+        onclick="toggleMenu()"
+      >
+        ☰
+      </button>
+
     </div>
   </header>
 
-  <!-- Mobile Navigation Drawer -->
-  <div class="mobile-drawer" id="mobileDrawer">
-    <nav class="mobile-nav-links">
-      <a href="#" class="active" onclick="closeMenu()">Ana Sayfa</a>
-      <a href="#menu" onclick="closeMenu()">Menü</a>
-      <a href="#menu" onclick="closeMenu()">Waffle Bowls</a>
-      <a href="#menu" onclick="closeMenu()">Cups & Desserts</a>
-      <a href="#coffee" onclick="closeMenu()">Specialty Coffee</a>
-      <a href="#quality" onclick="closeMenu()">Hakkımızda</a>
-      <a href="#order" onclick="closeMenu()">İletişim</a>
-    </nav>
-    <div class="mobile-drawer-footer">
-      <a href="https://www.trendyol.com/yemek" target="_blank" rel="noopener" class="btn btn-trendyol btn-block">
-        Trendyol Yemek'ten Sipariş Ver
-      </a>
-    </div>
-  </div>
 
-  <!-- ==========================================================================
-       HERO SECTION (Durum B: Aktif / Durum A için metinler kolayca güncellenebilir)
-       ========================================================================== -->
-  <section class="hero-section">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <span class="eyebrow">Beşiktaş · İstanbul</span>
-        <h1 class="hero-title">Tatlı rutininiz<br>yeni başlıyor.</h1>
-        <p class="hero-description">
-          Premium waffle, tatlılar ve specialty coffee. Sipariş anında taze hazırlanır, özenle ve keyifle adresinize ulaşır.
-        </p>
-        <div class="hero-cta-group">
-          <a href="#order" class="btn btn-primary">Online Sipariş Ver</a>
-          <a href="#menu" class="btn btn-secondary">Menüyü İncele</a>
-        </div>
-      </div>
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
 
-      <div class="hero-visual">
-        <!-- Gerçek görsel yerleşimi için placeholder - 4:5 Oran -->
-        <img 
-          src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=1000&q=80" 
-          alt="Routine Roasting Premium Waffle Bowl" 
-          loading="eager"
-          width="600" 
-          height="750">
-      </div>
-    </div>
-  </section>
+  <main>
 
-  <!-- ==========================================================================
-       CONCEPT / EDITORIAL MANIFESTO SECTION
-       ========================================================================== -->
-  <section class="concept-section" id="concept">
-    <div class="container concept-inner">
-      <span class="eyebrow">Routine. Roasting</span>
-      <h2 class="concept-title">Tatlıya yeni bir rutin.</h2>
-      <p class="concept-text">
-        Routine. Roasting; premium waffle, tatlı ve specialty coffee deneyimini modern bir yorumla buluşturur. Her ürün sipariş anında taze hazırlanır. Günün küçük bir anını, iyi bir rutine dönüştürmek için.
-      </p>
-    </div>
-  </section>
+    <section class="hero" id="home">
 
-  <!-- ==========================================================================
-       FEATURED PRODUCTS (FAVORİLERİMİZ)
-       ========================================================================== -->
-  <section class="products-section" id="featured">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">ROUTINE. ROASTING</span>
-        <h2 class="section-title">Favorilerimiz</h2>
-      </div>
+      <div class="container">
 
-      <div class="product-grid">
-        <article class="product-card">
-<div class="product-image-wrap">
-<span class="product-badge">Çok Tercih Edilen</span>
-<img src="https://images.unsplash.com/photo-1598214886806-c87b84b7078b?auto=format&fit=crop&w=800&q=85" alt="Bol Çikolatalı Waffle Bowl" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Bol Çikolatalı Waffle Bowl</h3>
-<span class="product-price">₺389,90</span>
-</div>
-<p class="product-desc">Yoğun çikolata ve waffle lezzeti</p>
-</div>
-</article>
+        <div class="hero-content">
 
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=85" alt="Routine Bowl XI" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Routine Bowl XI</h3>
-<span class="product-price">₺479,99</span>
-</div>
-<p class="product-desc">Routine'ın özel waffle bowl deneyimi</p>
-</div>
-</article>
+          <span class="eyebrow">
+            Beşiktaş · Specialty Coffee · Waffle
+          </span>
 
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=85" alt="Meyve Şöleni Bowl" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Meyve Şöleni Bowl</h3>
-<span class="product-price">₺549</span>
-</div>
-<p class="product-desc">Taze meyvelerle hazırlanan premium bowl</p>
-</div>
-</article>
+          <h1>
+            Tatlı<br>
+            rutininiz<br>
+            yeni başlıyor.
+          </h1>
 
-<article class="product-card">
-<div class="product-image-wrap">
-<span class="product-badge">Yeni</span>
-<img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=800&q=85" alt="Dubai Bowl" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Dubai Bowl</h3>
-<span class="product-price">₺498,99</span>
-</div>
-<p class="product-desc">Dubai esintili özel waffle bowl</p>
-</div>
-</article>
+          <p>
+            Premium waffle, özel bowl'lar ve specialty coffee.
+            Routine Roasting'de günlük rutininize biraz daha fazla
+            lezzet katın.
+          </p>
 
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1576618148400-cd1d5c0e3a4b?auto=format&fit=crop&w=800&q=85" alt="Crunchy Mood" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Crunchy Mood</h3>
-<span class="product-price">₺529</span>
-</div>
-<p class="product-desc">Çıtır dokularla hazırlanan özel bowl</p>
-</div>
-</article>
+          <div class="hero-buttons">
 
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=85" alt="The Ritual Bowl" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">The Ritual Bowl</h3>
-<span class="product-price">₺529</span>
-</div>
-<p class="product-desc">Routine ritüelinin özel bowl yorumu</p>
-</div>
-</article>
+            <a href="#products" class="btn btn-primary">
+              Menüyü Keşfet
+            </a>
 
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=800&q=85" alt="Muzlu Yerfıstıklı Waffle Bowl" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Muzlu Yerfıstıklı Waffle Bowl</h3>
-<span class="product-price">₺389,90</span>
-</div>
-<p class="product-desc">Muz ve yerfıstığı ile hazırlanan waffle bowl</p>
-</div>
-</article>
+            <a href="#order" class="btn btn-outline">
+              Online Sipariş
+            </a>
 
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1598214886806-c87b84b7078b?auto=format&fit=crop&w=800&q=85" alt="Dubai Waffle" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Dubai Waffle</h3>
-<span class="product-price">₺320</span>
-</div>
-<p class="product-desc">Dubai esintili premium waffle</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=85" alt="Dubai Cup" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Dubai Cup</h3>
-<span class="product-price">₺349,49</span>
-</div>
-<p class="product-desc">Dubai lezzetlerini taşıyan özel cup</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=85" alt="Routine Crème No 1" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Routine Crème No: 1</h3>
-<span class="product-price">₺369</span>
-</div>
-<p class="product-desc">Routine'ın özel kremalı tatlı deneyimi</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=85" alt="Routine Cup" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Routine Cup</h3>
-<span class="product-price">₺329,99</span>
-</div>
-<p class="product-desc">Sade ve premium Routine tatlısı</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=85" alt="Iced White Chocolate Mocha" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Iced White Chocolate Mocha</h3>
-<span class="product-price">₺270</span>
-</div>
-<p class="product-desc">Soğuk ve kremamsı beyaz çikolatalı kahve</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=85" alt="Iced Mocha" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Iced Mocha</h3>
-<span class="product-price">₺270</span>
-</div>
-<p class="product-desc">Yoğun espresso ve çikolatanın soğuk yorumu</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?auto=format&fit=crop&w=800&q=85" alt="Iced Filtre Coffee" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Iced Filtre Coffee</h3>
-<span class="product-price">₺190</span>
-</div>
-<p class="product-desc">Soğuk filtre kahve</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1517959105821-eaf2591984ca?auto=format&fit=crop&w=800&q=85" alt="Iced Americano" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Iced Americano</h3>
-<span class="product-price">₺210</span>
-</div>
-<p class="product-desc">Espresso ve soğuk su ile sade kahve</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=85" alt="Iced Latte" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Iced Latte</h3>
-<span class="product-price">₺230</span>
-</div>
-<p class="product-desc">Espresso ve soğuk süt</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=85" alt="Iced Caramel Latte" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Iced Caramel Latte</h3>
-<span class="product-price">₺270</span>
-</div>
-<p class="product-desc">Soğuk latte ve karamel dokunuşu</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=800&q=85" alt="Filtre Kahve" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Filtre Kahve</h3>
-<span class="product-price">₺170</span>
-</div>
-<p class="product-desc">Günlük specialty filtre kahve</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=85" alt="Americano" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Americano</h3>
-<span class="product-price">₺205</span>
-</div>
-<p class="product-desc">Espresso ve sıcak su</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=85" alt="Caffe Latte" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Caffe Latte</h3>
-<span class="product-price">₺215</span>
-</div>
-<p class="product-desc">Espresso ve kadifemsi süt</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=85" alt="Cappuccino" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Cappuccino</h3>
-<span class="product-price">₺220</span>
-</div>
-<p class="product-desc">Espresso süt ve yoğun köpük</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=85" alt="Flat White" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Flat White</h3>
-<span class="product-price">₺240</span>
-</div>
-<p class="product-desc">Yoğun espresso ve ince dokulu süt</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1579493934830-eab45746b51b?auto=format&fit=crop&w=800&q=85" alt="Caffe Mocha" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Caffe Mocha</h3>
-<span class="product-price">₺245</span>
-</div>
-<p class="product-desc">Espresso süt ve çikolata</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=85" alt="Cortado" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Cortado</h3>
-<span class="product-price">₺220</span>
-</div>
-<p class="product-desc">Dengeli espresso ve süt</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=85" alt="Karamel Latte" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Karamel Latte</h3>
-<span class="product-price">₺245</span>
-</div>
-<p class="product-desc">Latte ve karamel dokunuşu</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=85" alt="Vanilya Latte" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Vanilya Latte</h3>
-<span class="product-price">₺245</span>
-</div>
-<p class="product-desc">Kadifemsi latte ve vanilya</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=85" alt="Karamel Macchiato" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Karamel Macchiato</h3>
-<span class="product-price">₺245</span>
-</div>
-<p class="product-desc">Espresso süt ve karamel</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1579493934830-eab45746b51b?auto=format&fit=crop&w=800&q=85" alt="White Chocolate Mocha" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">White Chocolate Mocha</h3>
-<span class="product-price">₺245</span>
-</div>
-<p class="product-desc">Espresso süt ve beyaz çikolata</p>
-</div>
-</article>
-
-<article class="product-card">
-<div class="product-image-wrap">
-<img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=85" alt="Latte Macchiato" loading="lazy">
-</div>
-<div class="product-info">
-<div class="product-name-row">
-<h3 class="product-name">Latte Macchiato</h3>
-<span class="product-price">₺245</span>
-</div>
-<p class="product-desc">Süt köpüğü ve espresso</p>
-</div>
-</article>
-  </section>
-
-  <!-- ==========================================================================
-       MENU CATEGORIES
-       ========================================================================== -->
-  <section class="categories-section" id="menu">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">Waffle · Dessert · Coffee</span>
-        <h2 class="section-title">Menüyü Keşfet</h2>
-      </div>
-
-      <div class="category-grid">
-        <a href="#order" class="category-card">
-          <img src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=600&q=80" alt="Waffle Bowls" loading="lazy">
-          <div class="category-card-content">
-            <h3 class="category-card-title">Waffle Bowls</h3>
-            <p class="category-card-subtitle">Premium kase seçenekleri</p>
           </div>
-        </a>
 
-        <a href="#order" class="category-card">
-          <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80" alt="Cups & Desserts" loading="lazy">
-          <div class="category-card-content">
-            <h3 class="category-card-title">Cups & Desserts</h3>
-            <p class="category-card-subtitle">Özel butik tatlılar</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section class="intro" id="about">
+
+      <div class="container intro-grid">
+
+        <img
+          class="intro-image"
+          src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=85"
+          alt="Routine Roasting kahve"
+        >
+
+        <div class="intro-copy">
+
+          <span class="eyebrow">
+            ROUTINE ROASTING
+          </span>
+
+          <h2>
+            Her günün<br>
+            güzel bir<br>
+            rutini olsun.
+          </h2>
+
+          <p>
+            İyi kahve, sıcak waffle ve güzel bir atmosfer.
+            Routine Roasting; kahve molasını, tatlı kaçamağını
+            ve arkadaşlarla geçirilen zamanı tek bir deneyimde
+            buluşturmak için tasarlandı.
+          </p>
+
+          <p>
+            Menümüzde premium waffle bowl'lar, özel tatlılar,
+            klasik ve iced kahveler ile ferah içecek seçenekleri
+            bulabilirsiniz.
+          </p>
+
+          <div class="intro-note">
+            Coffee · Waffle · Dessert
           </div>
-        </a>
 
-        <a href="#order" class="category-card">
-          <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Specialty Coffee" loading="lazy">
-          <div class="category-card-content">
-            <h3 class="category-card-title">Coffee</h3>
-            <p class="category-card-subtitle">Nitelikli sıcak kahveler</p>
-          </div>
-        </a>
-
-        <a href="#order" class="category-card">
-          <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80" alt="Iced Coffee" loading="lazy">
-          <div class="category-card-content">
-            <h3 class="category-card-title">Iced Coffee</h3>
-            <p class="category-card-subtitle">Ferahlatıcı soğuk reçeteler</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       COFFEE EXPERIENCE
-       ========================================================================== -->
-  <section class="coffee-section" id="coffee">
-    <div class="container coffee-grid">
-      <div class="coffee-visual">
-        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Routine Roasting Specialty Coffee" loading="lazy">
-      </div>
-
-      <div class="coffee-content">
-        <span class="eyebrow">KAHVE RİTÜELİ</span>
-        <h2 class="section-title" style="margin-bottom: 1.25rem;">Tatlı rutininin en iyi eşlikçisi.</h2>
-        <p class="coffee-text">
-          Seçkin çiftliklerden tedarik edilen taze kavrulmuş çekirdekler, doğru ekstraksiyon ve ustalıkla hazırlanan kahve reçeteleri. İster yoğun bir espresso, ister ferahlatıcı bir soğuk kahve.
-        </p>
-        <div>
-          <a href="#order" class="btn btn-secondary">Kahveleri İncele</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       QUALITY & STANDARDS
-       ========================================================================== -->
-  <section class="quality-section" id="quality">
-    <div class="container">
-      <div class="quality-grid">
-        <div class="quality-item">
-          <span class="quality-item-num">01</span>
-          <h3 class="quality-item-title">Taze Hazırlanır</h3>
-          <p class="quality-item-text">Bekletilmiş ürün yok. Her siparişiniz, teslim anından hemen önce en taze malzemelerle üretilir.</p>
         </div>
 
-        <div class="quality-item">
-          <span class="quality-item-num">02</span>
-          <h3 class="quality-item-title">Özenle Seçilir</h3>
-          <p class="quality-item-text">Gerçek Belçika çikolatası, günlük meyveler ve nitelikli single-origin kahve çekirdekleri.</p>
-        </div>
-
-        <div class="quality-item">
-          <span class="quality-item-num">03</span>
-          <h3 class="quality-item-title">Rutine Dönüşür</h3>
-          <p class="quality-item-text">Günün yorucu akışında kendinize veya sevdiklerinize ayırdığınız küçük ama kusursuz bir tatlı anı.</p>
-        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ==========================================================================
-       ONLINE ORDERING SECTION
-       ========================================================================== -->
-  <section class="order-section" id="order">
-    <div class="container">
-      <div class="order-card-box">
-        <span class="eyebrow">BEŞİKTAŞ & ÇEVRESİ</span>
-        <h2 class="order-title">Canınız çektiyse beklemeyin.</h2>
-        <p class="order-desc">
-          Favori Routine. Roasting tatlınızı ve kahvenizi hemen online sipariş verin, kapınıza gelsin.
-        </p>
+    </section>
 
-        <div class="order-buttons">
-          <!-- Primary CTA: Trendyol Yemek -->
-          <a href="https://www.trendyol.com/yemek" target="_blank" rel="noopener" class="btn btn-trendyol btn-block">
-            Trendyol Yemek'ten Sipariş Ver
+
+    <!-- =====================================================
+         CATEGORIES
+    ====================================================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <span class="eyebrow">
+            MENÜ
+          </span>
+
+          <h2 class="section-title">
+            Ne istediğini<br>
+            seç.
+          </h2>
+
+          <p class="section-description">
+            Günün hangi modundaysan ona göre seçimini yap.
+          </p>
+
+        </div>
+
+
+        <div class="category-grid">
+
+          <a href="#products" class="category-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1598214886806-c87b84b7078b?auto=format&fit=crop&w=1000&q=85"
+              alt="Waffle Bowl"
+            >
+
+            <div class="category-content">
+              <h3>Waffle Bowls</h3>
+              <p>Premium kase seçenekleri</p>
+            </div>
+
           </a>
+
+
+          <a href="#products" class="category-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=1000&q=85"
+              alt="Tatlılar"
+            >
+
+            <div class="category-content">
+              <h3>Tatlılar</h3>
+              <p>Özel tatlı seçenekleri</p>
+            </div>
+
+          </a>
+
+
+          <a href="#coffee" class="category-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=85"
+              alt="Specialty Coffee"
+            >
+
+            <div class="category-content">
+              <h3>Coffee</h3>
+              <p>Hot & iced coffee</p>
+            </div>
+
+          </a>
+
         </div>
 
-        <!-- Secondary Platforms -->
-        <div class="secondary-order-platforms">
-          <a href="https://www.yemeksepeti.com" target="_blank" rel="noopener">Yemeksepeti</a>
-          <span>·</span>
-          <a href="https://getir.com/yemek/" target="_blank" rel="noopener">GetirYemek</a>
-        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ==========================================================================
+    </section>
+
+
+    <!-- =====================================================
+         PRODUCTS
+    ====================================================== -->
+
+    <section class="section products-section" id="products">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <span class="eyebrow">
+            WAFFLE & BOWL
+          </span>
+
+          <h2 class="section-title">
+            Favorilerimiz
+          </h2>
+
+          <p class="section-description">
+            Routine menüsünden öne çıkan ürünler.
+          </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+          <!-- PRODUCT 1 -->
+
+          <article class="product-card">
+
+            <img
+              class="product-image"
+              src="https://images.unsplash.com/photo-1598214886806-c87b84b7078b?auto=format&fit=crop&w=700&q=85"
+              alt="Bol Çikolatalı Waffle Bowl"
+              loading="lazy"
+            >
+
+            <div class="product-info">
+
+              <span class="product-tag">
+                Favori
+              </span>
+
+              <div class="product-name-row">
+
+                <h3 class="product-name">
+                  Bol Çikolatalı Waffle Bowl
+                </h3>
+
+                <span class="product-price">
+                  ₺389,90
+                </span>
+
+              </div>
+
+              <p class="product-desc">
+                Yoğun çikolata ve waffle lezzeti.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 2 -->
+
+          <article class="product-card">
+
+            <img
+              class="product-image"
+              src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=85"
+              alt="Routine Bowl XI"
+              loading="lazy"
+            >
+
+            <div class="product-info">
+
+              <span class="product-tag">
+                Special
+              </span>
+
+              <div class="product-name-row">
+
+                <h3 class="product-name">
+                  Routine Bowl XI
+                </h3>
+
+                <span class="product-price">
+                  ₺479,99
+                </span>
+
+              </div>
+
+              <p class="product-desc">
+                Routine'ın özel waffle bowl deneyimi.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 3 -->
+
+          <article class="product-card">
+
+            <img
+              class="product-image"
+              src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=85"
+              alt="Meyve Şöleni Bowl"
+              loading="lazy"
+            >
+
+            <div class="product-info">
+
+              <span class="product-tag">
+                Fresh
+              </span>
+
+              <div class="product-name-row">
+
+                <h3 class="product-name">
+                  Meyve Şöleni Bowl
+                </h3>
+
+                <span class="product-price">
+                  ₺549
+                </span>
+
+              </div>
+
+              <p class="product-desc">
+                Taze meyvelerle hazırlanan premium bowl.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 4 -->
+
+          <article class="product-card">
+
+            <img
+              class="product-image"
+              src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=700&q=85"
+              alt="Dubai Bowl"
+              loading="lazy"
+            >
+
+            <div class="product-info">
+
+              <span class="product-tag">
+                Special
+              </span>
+
+              <div class="product-name-row">
+
+                <h3 class="product-name">
+                  Dubai Bowl
+                </h3>
+
+                <span class="product-price">
+                  ₺498,99
+                </span>
+
+              </div>
+
+              <p class="product-desc">
+                Dubai esintili özel waffle bowl.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 5 -->
+
+          <article class="product-card">
+
+            <img
+              class="product-image"
+              src="https://images.unsplash.com/photo-1576618148400-cd1d5c0e3a4b?auto=format&fit=crop&w=700&q=85"
+              alt="Crunchy Mood"
+              loading="lazy"
+            >
+
+            <div class="product-info">
+
+              <span class="product-tag">
+                Crunchy
+              </span>
+
+              <div class="product-name-row">
+
+                <h3 class="product-name">
+                  Crunchy Mood
+                </h3>
+
+                <span class="product-price">
+                  ₺529
+                </span>
+
+              </div>
+
+              <p class="product-desc">
+                Çıtır dokular ve yoğun tatlarla hazırlanan özel bowl.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 6 -->
+
+          <article class="product-card">
+
+            <img
+              class="product-image"
+              src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=700&q=85"
+              alt="The Ritual Bowl"
+              loading="lazy"
+            >
+
+            <div class="product-info">
+
+              <span class="product-tag">
+                Routine
+              </span>
+
+              <div class="product-name-row">
+
+                <h3 class="product-name">
+                  The Ritual Bowl
+                </h3>
+
+                <span class="product-price">
+                  ₺529
+                </span>
+
+              </div>
+
+              <p class="product-desc">
+                Routine ritüelinin özel bowl yorumu.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 7 -->
+
+          <article class="product-card">
+
+            <img
+              class="product-image"
+              src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=700&q=85"
+              alt="Muzlu Yerfıstıklı Waffle Bowl"
+              loading="lazy"
+            >
+
+            <div class="product-info">
+
+              <span class="product-tag">
+                Favorite
+              </span>
+
+              <div class="product-name-row">
+
+                <h3 class="product-name">
+                  Muzlu Yerfıstıklı Waffle Bowl
+                </h3>
+
+                <span class="product-price">
+                  ₺389,90
+                </span>
+
+              </div>
+
+              <p class="product-desc">
+                Muz ve yerfıstığı lezzetini buluşturan waffle bowl.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 8 -->
+
+          <article class="product-card">
+
+            <img
+              class="product-image"
+              src="https://images.unsplash.com/photo-1598214886806-c87b84b7078b?auto=format&fit=crop&w=700&q=85"
+              alt="Dubai Waffle"
+              loading="lazy"
+            >
+
+            <div class="product-info">
+
+              <span class="product-tag">
+                Waffle
+              </span>
+
+              <div class="product-name-row">
+
+                <h3 class="product-name">
+                  Dubai Waffle
+                </h3>
+
+                <span class="product-price">
+                  ₺320
+                </span>
+
+              </div>
+
+              <p class="product-desc">
+                Dubai esintili premium waffle.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 9 -->
+
+          <article class="product-card">
+
+            <img
+              class="product-image"
+              src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=85"
+              alt="Dubai Cup"
+              loading="lazy"
+            >
+
+            <div class="product-info">
+
+              <span class="product-tag">
+                Cup
+              </span>
+
+              <div class="product-name-row">
+
+                <h3 class="product-name">
+                  Dubai Cup
+                </h3>
+
+                <span class="product-price">
+                  ₺349,49
+                </span>
+
+              </div>
+
+              <p class="product-desc">
+                Dubai lezzetlerini taşıyan özel cup.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 10 -->
+
+          <article class="product-card">
+
+            <img
+              class="product-image"
+              src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=85"
+              alt="Routine Crème No 1"
+              loading="lazy"
+            >
+
+            <div class="product-info">
+
+              <span class="product-tag">
+                Dessert
+              </span>
+
+              <div class="product-name-row">
+
+                <h3 class="product-name">
+                  Routine Crème No: 1
+                </h3>
+
+                <span class="product-price">
+                  ₺369
+                </span>
+
+              </div>
+
+              <p class="product-desc">
+                Routine'ın özel kremalı tatlı deneyimi.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 11 -->
+
+          <article class="product-card">
+
+            <img
+              class="product-image"
+              src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=85"
+              alt="Routine Cup"
+              loading="lazy"
+            >
+
+            <div class="product-info">
+
+              <span class="product-tag">
+                Dessert
+              </span>
+
+              <div class="product-name-row">
+
+                <h3 class="product-name">
+                  Routine Cup
+                </h3>
+
+                <span class="product-price">
+                  ₺329,99
+                </span>
+
+              </div>
+
+              <p class="product-desc">
+                Sade ve premium Routine tatlısı.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 12 -->
+
+          <article class="product-card">
+
+            <img
+              class="product-image"
+              src="https://images.unsplash.com/photo-1598214886806-c87b84b7078b?auto=format&fit=crop&w=700&q=85"
+              alt="Çift Soslu Klasik Waffle"
+              loading="lazy"
+            >
+
+            <div class="product-info">
+
+              <span class="product-tag">
+                Waffle
+              </span>
+
+              <div class="product-name-row">
+
+                <h3 class="product-name">
+                  Çift Soslu Klasik Waffle
+                </h3>
+
+                <span class="product-price">
+                  Menüde
+                </span>
+
+              </div>
+
+              <p class="product-desc">
+                Klasik waffle ve çift sos kombinasyonu.
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         COFFEE
+    ====================================================== -->
+
+    <section class="section coffee-section" id="coffee">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <span class="eyebrow">
+            SPECIALTY COFFEE
+          </span>
+
+          <h2 class="section-title">
+            Kahve zamanı.
+          </h2>
+
+          <p class="section-description">
+            Sıcak veya soğuk. Klasiklerden favori reçetelere.
+          </p>
+
+        </div>
+
+
+        <div class="coffee-grid">
+
+
+          <article class="coffee-card">
+            <h3>Filtre Kahve</h3>
+            <p>Günün sade ve dengeli kahvesi.</p>
+            <span class="coffee-price">₺170</span>
+          </article>
+
+
+          <article class="coffee-card">
+            <h3>Americano</h3>
+            <p>Yoğun espresso ve sıcak su.</p>
+            <span class="coffee-price">₺205</span>
+          </article>
+
+
+          <article class="coffee-card">
+            <h3>Caffe Latte</h3>
+            <p>Espresso ve ipeksi süt dokusu.</p>
+            <span class="coffee-price">₺215</span>
+          </article>
+
+
+          <article class="coffee-card">
+            <h3>Cappuccino</h3>
+            <p>Espresso, süt ve yoğun köpük.</p>
+            <span class="coffee-price">₺220</span>
+          </article>
+
+
+          <article class="coffee-card">
+            <h3>Flat White</h3>
+            <p>Yoğun espresso ve kadifemsi süt.</p>
+            <span class="coffee-price">₺240</span>
+          </article>
+
+
+          <article class="coffee-card">
+            <h3>Caffe Mocha</h3>
+            <p>Kahve ve çikolatanın dengeli buluşması.</p>
+            <span class="coffee-price">₺245</span>
+          </article>
+
+
+          <article class="coffee-card">
+            <h3>Cortado</h3>
+            <p>Espresso ve dengeli süt oranı.</p>
+            <span class="coffee-price">₺220</span>
+          </article>
+
+
+          <article class="coffee-card">
+            <h3>Karamel Latte</h3>
+            <p>Latte ve karamel dokunuşu.</p>
+            <span class="coffee-price">₺245</span>
+          </article>
+
+
+          <article class="coffee-card">
+            <h3>Vanilya Latte</h3>
+            <p>Espresso, süt ve vanilya aroması.</p>
+            <span class="coffee-price">₺245</span>
+          </article>
+
+
+          <article class="coffee-card">
+            <h3>Karamel Macchiato</h3>
+            <p>Karamel ve espresso karakteri.</p>
+            <span class="coffee-price">₺245</span>
+          </article>
+
+
+          <article class="coffee-card">
+            <h3>White Chocolate Mocha</h3>
+            <p>Beyaz çikolata ve kahve.</p>
+            <span class="coffee-price">₺245</span>
+          </article>
+
+
+          <article class="coffee-card">
+            <h3>Latte Macchiato</h3>
+            <p>Süt, espresso ve yumuşak içim.</p>
+            <span class="coffee-price">₺245</span>
+          </article>
+
+
+          <article class="coffee-card">
+            <h3>Iced White Chocolate Mocha</h3>
+            <p>Soğuk beyaz çikolatalı kahve.</p>
+            <span class="coffee-price">₺270</span>
+          </article>
+
+
+          <article class="coffee-card">
+            <h3>Iced Mocha</h3>
+            <p>Soğuk espresso ve çikolata.</p>
+            <span class="coffee-price">₺270</span>
+          </article>
+
+
+          <article class="coffee-card">
+            <h3>Iced Filtre Coffee</h3>
+            <p>Soğuk filtre kahve.</p>
+            <span class="coffee-price">₺190</span>
+          </article>
+
+
+          <article class="coffee-card">
+            <h3>Iced Americano</h3>
+            <p>Soğuk ve ferah Americano.</p>
+            <span class="coffee-price">₺210</span>
+          </article>
+
+
+          <article class="coffee-card">
+            <h3>Iced Latte</h3>
+            <p>Soğuk sütlü espresso.</p>
+            <span class="coffee-price">₺230</span>
+          </article>
+
+
+          <article class="coffee-card">
+            <h3>Iced Caramel Latte</h3>
+            <p>Soğuk latte ve karamel.</p>
+            <span class="coffee-price">₺270</span>
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DRINKS
+    ====================================================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <span class="eyebrow">
+            İÇECEKLER
+          </span>
+
+          <h2 class="section-title">
+            Kahvenin yanında.
+          </h2>
+
+        </div>
+
+
+        <div class="coffee-grid">
+
+          <article class="coffee-card">
+            <h3>Coca Cola (250ml)</h3>
+            <p>Klasik soğuk içecek.</p>
+            <span class="coffee-price">₺110</span>
+          </article>
+
+          <article class="coffee-card">
+            <h3>Coca Cola Zero (250ml)</h3>
+            <p>Şekersiz Coca Cola.</p>
+            <span class="coffee-price">₺110</span>
+          </article>
+
+          <article class="coffee-card">
+            <h3>Sprite (250ml)</h3>
+            <p>Serinletici gazlı içecek.</p>
+            <span class="coffee-price">₺110</span>
+          </article>
+
+          <article class="coffee-card">
+            <h3>San Pellegrino (250ml)</h3>
+            <p>Premium maden suyu.</p>
+            <span class="coffee-price">₺165</span>
+          </article>
+
+          <article class="coffee-card">
+            <h3>Uludağ Premium (400 ml)</h3>
+            <p>Premium su seçeneği.</p>
+            <span class="coffee-price">₺60</span>
+          </article>
+
+          <article class="coffee-card">
+            <h3>El Yapımı Limonata</h3>
+            <p>Ev yapımı ferah limonata.</p>
+            <span class="coffee-price">₺110</span>
+          </article>
+
+          <article class="coffee-card">
+            <h3>Çilekli Limonata</h3>
+            <p>Çilek ve limonun ferah buluşması.</p>
+            <span class="coffee-price">₺130</span>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ORDER
+    ====================================================== -->
+
+    <section class="order-section" id="order">
+
+      <div class="container">
+
+        <div class="order-card">
+
+          <span class="eyebrow">
+            BEŞİKTAŞ & ÇEVRESİ
+          </span>
+
+          <h2>
+            Canınız çektiyse<br>
+            beklemeyin.
+          </h2>
+
+          <p>
+            Routine Roasting tatlınızı ve kahvenizi online
+            sipariş vererek kolayca kapınıza getirtebilirsiniz.
+          </p>
+
+          <div class="order-buttons">
+
+            <!-- BURAYA GERÇEK TRENDYOL YEMEK LİNKİNİ KOY -->
+
+            <a
+              href="https://www.trendyol.com/yemek"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary"
+            >
+              Trendyol Yemek'ten Sipariş Ver
+            </a>
+
+
+            <!-- BURAYA GERÇEK YEMEKSEPETİ LİNKİNİ KOY -->
+
+            <a
+              href="https://www.yemeksepeti.com"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-outline"
+            >
+              Yemeksepeti
+            </a>
+
+
+            <!-- BURAYA GERÇEK GETİR YEMEK LİNKİNİ KOY -->
+
+            <a
+              href="https://getir.com/yemek/"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-outline"
+            >
+              GetirYemek
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section class="contact" id="contact">
+
+      <div class="container contact-grid">
+
+
+        <div>
+
+          <span class="eyebrow">
+            İLETİŞİM
+          </span>
+
+          <h2 class="section-title">
+            Bize<br>
+            uğrayın.
+          </h2>
+
+
+          <div class="contact-info">
+
+
+            <!--
+              =================================================
+              ADRES
+              =================================================
+
+              BURAYA GERÇEK ADRESİ YAZ.
+            -->
+
+            <div class="contact-item">
+
+              <span class="contact-label">
+                Adres
+              </span>
+
+              <span class="contact-value">
+                Beşiktaş, İstanbul
+              </span>
+
+            </div>
+
+
+            <!--
+              =================================================
+              TELEFON
+              =================================================
+
+              GERÇEK TELEFON NUMARASI GELDİĞİNDE BURAYA KOY.
+            -->
+
+            <div class="contact-item">
+
+              <span class="contact-label">
+                Telefon
+              </span>
+
+              <span class="contact-value">
+                Telefon bilgisi yakında
+              </span>
+
+            </div>
+
+
+            <!--
+              =================================================
+              INSTAGRAM
+              =================================================
+
+              GERÇEK INSTAGRAM LINKİ GELDİĞİNDE BURAYA KOY.
+            -->
+
+            <div class="contact-item">
+
+              <span class="contact-label">
+                Instagram
+              </span>
+
+              <span class="contact-value">
+                @routine.roasting
+              </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <span class="contact-label">
+                Çalışma
+              </span>
+
+              <span class="contact-value">
+                Güncel çalışma saatleri için sosyal medya hesaplarımızı kontrol edin.
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+        <div class="map-placeholder">
+
+          <div class="map-box">
+
+            <strong>
+              Routine Roasting
+            </strong>
+
+            <span>
+              Beşiktaş · İstanbul
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =======================================================
        FOOTER
-       ========================================================================== -->
-  <footer class="site-footer">
+  ======================================================== -->
+
+  <footer class="footer">
+
     <div class="container">
+
       <div class="footer-grid">
+
+
         <div class="footer-brand">
-          <h3>Routine. Roasting</h3>
-          <p>Tatlı rutininiz yeni başlıyor. Beşiktaş merkezli premium tatlı & specialty coffee deneyimi.</p>
+
+          <h2>
+            Routine.
+          </h2>
+
+          <p>
+            Premium waffle, specialty coffee ve tatlılar.
+            Günlük rutininize biraz daha fazla lezzet katmak için.
+          </p>
+
         </div>
 
-        <div class="footer-col">
-          <h4>Keşfet</h4>
-          <ul>
-            <li><a href="#menu">Menü</a></li>
-            <li><a href="#featured">Öne Çıkanlar</a></li>
-            <li><a href="#coffee">Kahve</a></li>
-            <li><a href="#quality">Konsept</a></li>
-          </ul>
+
+        <div class="footer-column">
+
+          <h3>
+            Menü
+          </h3>
+
+          <a href="#products">
+            Waffle & Bowl
+          </a>
+
+          <a href="#coffee">
+            Coffee
+          </a>
+
+          <a href="#order">
+            Sipariş
+          </a>
+
         </div>
 
-        <div class="footer-col">
-          <h4>Sipariş & İletişim</h4>
-          <ul>
-            <li><a href="https://www.trendyol.com/yemek" target="_blank" rel="noopener">Trendyol Yemek</a></li>
-            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
-            <li><span style="opacity:0.8; font-size:0.9rem;">Beşiktaş, İstanbul</span></li>
-          </ul>
+
+        <div class="footer-column">
+
+          <h3>
+            Keşfet
+          </h3>
+
+          <a href="#about">
+            Hakkımızda
+          </a>
+
+          <a href="#contact">
+            İletişim
+          </a>
+
+          <a href="#home">
+            Ana Sayfa
+          </a>
+
         </div>
+
+
       </div>
+
 
       <div class="footer-bottom">
-        <p>© 2026 Routine. Roasting. Tüm hakları saklıdır.</p>
-        <p>Designed with a Mobile-First Brand Experience.</p>
+
+        <span>
+          © 2026 Routine Roasting
+        </span>
+
+        <span>
+          Beşiktaş · İstanbul
+        </span>
+
       </div>
+
     </div>
+
   </footer>
 
-  <!-- ==========================================================================
-       MOBILE BOTTOM STICKY ACTION BAR
-       ========================================================================== -->
-  <div class="mobile-sticky-cta">
-    <a href="#menu" class="btn btn-secondary" style="flex: 1; padding: 0.75rem 1rem; font-size: 0.85rem;">
-      Menü
-    </a>
-    <a href="https://www.trendyol.com/yemek" target="_blank" rel="noopener" class="btn btn-trendyol" style="flex: 2; padding: 0.75rem 1rem; font-size: 0.85rem;">
-      Online Sipariş
-    </a>
-  </div>
 
-  <!-- Minimal Smooth Interactions Script -->
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
   <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileDrawer = document.getElementById('mobileDrawer');
 
-    menuToggle.addEventListener('click', () => {
-      mobileDrawer.classList.toggle('active');
-      document.body.style.overflow = mobileDrawer.classList.contains('active') ? 'hidden' : '';
+    function toggleMenu() {
+
+      const nav = document.querySelector(".nav-links");
+
+      if (nav.style.display === "flex") {
+
+        nav.style.display = "";
+
+      } else {
+
+        nav.style.display = "flex";
+        nav.style.position = "absolute";
+        nav.style.top = "68px";
+        nav.style.left = "0";
+        nav.style.right = "0";
+        nav.style.padding = "20px";
+        nav.style.background = "#f6f1e8";
+        nav.style.flexDirection = "column";
+        nav.style.alignItems = "stretch";
+        nav.style.borderBottom = "1px solid rgba(23,21,19,.12)";
+
+      }
+
+    }
+
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+      link.addEventListener("click", function() {
+
+        if (window.innerWidth <= 900) {
+
+          document.querySelector(".nav-links").style.display = "";
+
+        }
+
+      });
+
     });
 
-    function closeMenu() {
-      mobileDrawer.classList.remove('active');
-      document.body.style.overflow = '';
-    }
   </script>
+
 </body>
 </html>
