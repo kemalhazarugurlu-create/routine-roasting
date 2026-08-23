@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Routine. Roasting | Premium Waffle & Specialty Coffee Beşiktaş</title>
+  <meta name="title" content="Routine. Roasting | Premium Waffle & Specialty Coffee Beşiktaş">
+  <meta name="description" content="Beşiktaş'ta premium waffle, waffle bowl, tatlı ve specialty coffee deneyimini keşfedin. Routine. Roasting menüsüne göz atın ve online sipariş verin.">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://routineroasting.com/">
+  <meta property="og:title" content="Routine. Roasting | Tatlı rutininiz yeni başlıyor.">
+  <meta property="og:description" content="Beşiktaş merkezli premium waffle, waffle bowls ve specialty coffee markası.">
+
+  <!-- Typography: Cormorant Garamond & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       1. DESIGN SYSTEM VARIABLES & RESET
+       ========================================================================== */
+    :root {
+      --bg-primary: #F6F1E8;
+      --bg-secondary: #EDE4D6;
+      --bg-pure: #FBF9F5;
+      --text-primary: #171513;
+      --text-secondary: #5C554D;
+      --text-muted: #8E8478;
+      --warm-brown: #3A2C22;
+      --accent-beige: #B8A58B;
+      --subtle-gold: #B69A68;
+      --border-subtle: rgba(23, 21, 19, 0.08);
+      --border-medium: rgba(23, 21, 19, 0.16);
+
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+
+      --container-max: 1280px;
+      --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.6;
+      font-weight: 400;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      padding-bottom: 72px; /* For mobile sticky CTA */
+    }
+
+    @media (min-width: 992px) {
+      body {
+        padding-bottom: 0;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: 0 2.5rem;
+      }
+    }
+
+    /* Sub-tags & Labels */
+    .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+      display: inline-block;
+    }
+
+    /* ==========================================================================
+       2. HEADER & NAVIGATION
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(246, 241, 232, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: var(--transition-smooth);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+
+    .logo span {
+      color: var(--subtle-gold);
+    }
+
+    .nav-desktop {
+      display: none;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-desktop a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.02em;
+    }
+
+    .nav-desktop a:hover {
+      color: var(--text-primary);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .btn-header-order {
+      display: none;
+      padding: 0.6rem 1.25rem;
+      background-color: var(--text-primary);
+      color: var(--bg-pure);
+      font-size: 0.825rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      border-radius: var(--radius-sm);
+    }
+
+    .btn-header-order:hover {
+      background-color: var(--warm-brown);
+    }
+
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 32px;
+      height: 32px;
+      padding: 4px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 100%;
+      height: 1.5px;
+      background-color: var(--text-primary);
+      transition: var(--transition-smooth);
+    }
+
+    /* Mobile Drawer */
+    .mobile-drawer {
+      position: fixed;
+      top: 68px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 68px);
+      background-color: var(--bg-pure);
+      padding: 2.5rem 1.5rem;
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 99;
+    }
+
+    .mobile-drawer.active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .mobile-nav-links a {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .mobile-nav-links a.active {
+      color: var(--subtle-gold);
+    }
+
+    .mobile-drawer-footer {
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    @media (min-width: 992px) {
+      .nav-desktop { display: flex; }
+      .btn-header-order { display: inline-flex; }
+      .menu-toggle { display: none; }
+      .mobile-drawer { display: none; }
+    }
+
+    /* ==========================================================================
+       3. BUTTONS & UI ELEMENTS
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 1.75rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-primary {
+      background-color: var(--text-primary);
+      color: var(--bg-pure);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--warm-brown);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-primary);
+      border: 1px solid var(--border-medium);
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(23, 21, 19, 0.04);
+      border-color: var(--text-primary);
+    }
+
+    .btn-trendyol {
+      background-color: #F27A1A;
+      color: #FFFFFF;
+      font-weight: 700;
+    }
+
+    .btn-trendyol:hover {
+      background-color: #D96509;
+      transform: translateY(-1px);
+    }
+
+    .btn-block {
+      width: 100%;
+    }
+
+    /* ==========================================================================
+       4. HERO SECTION (Mobile-First)
+       ========================================================================== */
+    .hero-section {
+      padding: 2.5rem 0 3.5rem;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 7vw, 4.2rem);
+      line-height: 1.08;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+      color: var(--text-primary);
+    }
+
+    .hero-description {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      max-width: 480px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .hero-visual {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background-color: var(--bg-secondary);
+    }
+
+    .hero-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-visual:hover img {
+      transform: scale(1.02);
+    }
+
+    @media (min-width: 576px) {
+      .hero-cta-group {
+        flex-direction: row;
+        align-items: center;
+      }
+      .hero-cta-group .btn {
+        width: auto;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .hero-section {
+        padding: 4.5rem 0 5rem;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 4.5rem;
+        align-items: center;
+      }
+    }
+
+    /* ==========================================================================
+       5. CONCEPT / MANIFESTO SECTION
+       ========================================================================== */
+    .concept-section {
+      padding: 3.5rem 0;
+      background-color: var(--bg-pure);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      text-align: center;
+    }
+
+    .concept-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .concept-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.2;
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+    }
+
+    .concept-text {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      font-weight: 300;
+    }
+
+    /* ==========================================================================
+       6. FEATURED PRODUCTS (FAVORİLERİMİZ)
+       ========================================================================== */
+    .section-header {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    .products-section {
+      padding: 4rem 0;
+    }
+
+    /* Clean, Editorial Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 576px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+    }
+
+    .product-card {
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-image-wrap {
+      position: relative;
+      aspect-ratio: 1/1;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background-color: var(--bg-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .product-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .product-card:hover .product-image-wrap img {
+      transform: scale(1.03);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: rgba(251, 249, 245, 0.92);
+      color: var(--text-primary);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 2px;
+    }
+
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-name-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .product-name {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .product-price {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--warm-brown);
+      white-space: nowrap;
+    }
+
+    .product-desc {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+
+    /* ==========================================================================
+       7. MENU CATEGORIES SECTION
+       ========================================================================== */
+    .categories-section {
+      padding: 4rem 0;
+      background-color: var(--bg-secondary);
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 768px) {
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 992px) {
+      .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .category-card {
+      position: relative;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background-color: var(--warm-brown);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      color: var(--bg-pure);
+    }
+
+    .category-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.72;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .category-card:hover img {
+      transform: scale(1.04);
+      opacity: 0.6;
+    }
+
+    .category-card-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .category-card-title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: #FFFFFF;
+    }
+
+    .category-card-subtitle {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       8. COFFEE & RITUAL SECTION
+       ========================================================================== */
+    .coffee-section {
+      padding: 4.5rem 0;
+    }
+
+    .coffee-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .coffee-visual {
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background-color: var(--bg-secondary);
+    }
+
+    .coffee-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .coffee-text {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 992px) {
+      .coffee-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 4.5rem;
+        align-items: center;
+      }
+    }
+
+    /* ==========================================================================
+       9. BRAND VALUES / QUALITY
+       ========================================================================== */
+    .quality-section {
+      padding: 3.5rem 0;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      background-color: var(--bg-pure);
+    }
+
+    .quality-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .quality-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+      }
+    }
+
+    .quality-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .quality-item-num {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--subtle-gold);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .quality-item-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .quality-item-text {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       10. ONLINE ORDERING SECTION (Trendyol Primary)
+       ========================================================================== */
+    .order-section {
+      padding: 4.5rem 0;
+      background-color: var(--bg-primary);
+      text-align: center;
+    }
+
+    .order-card-box {
+      max-width: 640px;
+      margin: 0 auto;
+      background-color: var(--bg-pure);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2.5rem 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .order-card-box {
+        padding: 3.5rem 2.5rem;
+      }
+    }
+
+    .order-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .order-desc {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    .order-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .secondary-order-platforms {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .secondary-order-platforms a:hover {
+      color: var(--text-primary);
+      text-decoration: underline;
+    }
+
+    /* ==========================================================================
+       11. FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: var(--warm-brown);
+      color: var(--bg-pure);
+      padding: 3.5rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+    }
+
+    .footer-brand h3 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      color: var(--accent-beige);
+      max-width: 320px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-beige);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-col a {
+      font-size: 0.9rem;
+      color: var(--bg-pure);
+      opacity: 0.8;
+    }
+
+    .footer-col a:hover {
+      opacity: 1;
+      color: #FFFFFF;
+    }
+
+    .footer-bottom {
+      padding-top: 1.75rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--accent-beige);
+    }
+
+    @media (min-width: 768px) {
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    /* ==========================================================================
+       12. MOBILE FIXED STICKY BOTTOM BAR
+       ========================================================================== */
+    .mobile-sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(251, 249, 245, 0.96);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-top: 1px solid var(--border-subtle);
+      padding: 0.75rem 1.25rem;
+      z-index: 90;
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    @media (min-width: 992px) {
+      .mobile-sticky-cta {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Routine Roasting Ana Sayfa">
+        Routine<span>.</span> Roasting
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop">
+        <a href="#menu">Menü</a>
+        <a href="#concept">Konsept</a>
+        <a href="#coffee">Kahve</a>
+        <a href="#quality">Hakkımızda</a>
+        <a href="#order">İletişim</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://www.trendyol.com/yemek" target="_blank" rel="noopener" class="btn-header-order">
+          Online Sipariş Ver
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menüyü Aç/Kapat">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <nav class="mobile-nav-links">
+      <a href="#" class="active" onclick="closeMenu()">Ana Sayfa</a>
+      <a href="#menu" onclick="closeMenu()">Menü</a>
+      <a href="#menu" onclick="closeMenu()">Waffle Bowls</a>
+      <a href="#menu" onclick="closeMenu()">Cups & Desserts</a>
+      <a href="#coffee" onclick="closeMenu()">Specialty Coffee</a>
+      <a href="#quality" onclick="closeMenu()">Hakkımızda</a>
+      <a href="#order" onclick="closeMenu()">İletişim</a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <a href="https://www.trendyol.com/yemek" target="_blank" rel="noopener" class="btn btn-trendyol btn-block">
+        Trendyol Yemek'ten Sipariş Ver
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       HERO SECTION (Durum B: Aktif / Durum A için metinler kolayca güncellenebilir)
+       ========================================================================== -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="eyebrow">Beşiktaş · İstanbul</span>
+        <h1 class="hero-title">Tatlı rutininiz<br>yeni başlıyor.</h1>
+        <p class="hero-description">
+          Premium waffle, tatlılar ve specialty coffee. Sipariş anında taze hazırlanır, özenle ve keyifle adresinize ulaşır.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#order" class="btn btn-primary">Online Sipariş Ver</a>
+          <a href="#menu" class="btn btn-secondary">Menüyü İncele</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <!-- Gerçek görsel yerleşimi için placeholder - 4:5 Oran -->
+        <img 
+          src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=1000&q=80" 
+          alt="Routine Roasting Premium Waffle Bowl" 
+          loading="eager"
+          width="600" 
+          height="750">
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONCEPT / EDITORIAL MANIFESTO SECTION
+       ========================================================================== -->
+  <section class="concept-section" id="concept">
+    <div class="container concept-inner">
+      <span class="eyebrow">Routine. Roasting</span>
+      <h2 class="concept-title">Tatlıya yeni bir rutin.</h2>
+      <p class="concept-text">
+        Routine. Roasting; premium waffle, tatlı ve specialty coffee deneyimini modern bir yorumla buluşturur. Her ürün sipariş anında taze hazırlanır. Günün küçük bir anını, iyi bir rutine dönüştürmek için.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURED PRODUCTS (FAVORİLERİMİZ)
+       ========================================================================== -->
+  <section class="products-section" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">ROUTINE. ROASTING</span>
+        <h2 class="section-title">Favorilerimiz</h2>
+      </div>
+
+      <div class="product-grid">
+        <!-- Ürün 1 -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <span class="product-badge">Favori</span>
+            <img src="https://images.unsplash.com/photo-1598214886806-c87b84b7078b?auto=format&fit=crop&w=600&q=80" alt="Routine Roasting Dubai Waffle" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div class="product-name-row">
+              <h3 class="product-name">Dubai Waffle</h3>
+              <span class="product-price">₺320</span>
+            </div>
+            <p class="product-desc">Çıtır waffle, yoğun Belçika çikolatası ve fıstıklı Dubai kreması dokunuşu.</p>
+          </div>
+        </article>
+
+        <!-- Ürün 2 -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <span class="product-badge">Yeni</span>
+            <img src="https://images.unsplash.com/photo-1568051243851-f9b136146e97?auto=format&fit=crop&w=600&q=80" alt="Routine Roasting Bol Çikolatalı Waffle Bowl" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div class="product-name-row">
+              <h3 class="product-name">Bol Çikolatalı Bowl</h3>
+              <span class="product-price">₺290</span>
+            </div>
+            <p class="product-desc">Sıcak waffle parçaları, akışkan sütlü & bitter çikolata sosu ve taze çilek.</p>
+          </div>
+        </article>
+
+        <!-- Ürün 3 -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Routine Roasting Dubai Cup" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div class="product-name-row">
+              <h3 class="product-name">Dubai Cup</h3>
+              <span class="product-price">₺260</span>
+            </div>
+            <p class="product-desc">Kat kat çıtır kadayıf, özel antep fıstığı ezmesi ve ipeksi krema katmanları.</p>
+          </div>
+        </article>
+
+        <!-- Ürün 4 -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80" alt="Routine Roasting Iced Spanish Latte" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div class="product-name-row">
+              <h3 class="product-name">Iced Spanish Latte</h3>
+              <span class="product-price">₺165</span>
+            </div>
+            <p class="product-desc">Özel kavrum çift shot espresso, yoğunlaştırılmış süt ve soğuk süt dengesi.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MENU CATEGORIES
+       ========================================================================== -->
+  <section class="categories-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Waffle · Dessert · Coffee</span>
+        <h2 class="section-title">Menüyü Keşfet</h2>
+      </div>
+
+      <div class="category-grid">
+        <a href="#order" class="category-card">
+          <img src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=600&q=80" alt="Waffle Bowls" loading="lazy">
+          <div class="category-card-content">
+            <h3 class="category-card-title">Waffle Bowls</h3>
+            <p class="category-card-subtitle">Premium kase seçenekleri</p>
+          </div>
+        </a>
+
+        <a href="#order" class="category-card">
+          <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80" alt="Cups & Desserts" loading="lazy">
+          <div class="category-card-content">
+            <h3 class="category-card-title">Cups & Desserts</h3>
+            <p class="category-card-subtitle">Özel butik tatlılar</p>
+          </div>
+        </a>
+
+        <a href="#order" class="category-card">
+          <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Specialty Coffee" loading="lazy">
+          <div class="category-card-content">
+            <h3 class="category-card-title">Coffee</h3>
+            <p class="category-card-subtitle">Nitelikli sıcak kahveler</p>
+          </div>
+        </a>
+
+        <a href="#order" class="category-card">
+          <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80" alt="Iced Coffee" loading="lazy">
+          <div class="category-card-content">
+            <h3 class="category-card-title">Iced Coffee</h3>
+            <p class="category-card-subtitle">Ferahlatıcı soğuk reçeteler</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       COFFEE EXPERIENCE
+       ========================================================================== -->
+  <section class="coffee-section" id="coffee">
+    <div class="container coffee-grid">
+      <div class="coffee-visual">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Routine Roasting Specialty Coffee" loading="lazy">
+      </div>
+
+      <div class="coffee-content">
+        <span class="eyebrow">KAHVE RİTÜELİ</span>
+        <h2 class="section-title" style="margin-bottom: 1.25rem;">Tatlı rutininin en iyi eşlikçisi.</h2>
+        <p class="coffee-text">
+          Seçkin çiftliklerden tedarik edilen taze kavrulmuş çekirdekler, doğru ekstraksiyon ve ustalıkla hazırlanan kahve reçeteleri. İster yoğun bir espresso, ister ferahlatıcı bir soğuk kahve.
+        </p>
+        <div>
+          <a href="#order" class="btn btn-secondary">Kahveleri İncele</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       QUALITY & STANDARDS
+       ========================================================================== -->
+  <section class="quality-section" id="quality">
+    <div class="container">
+      <div class="quality-grid">
+        <div class="quality-item">
+          <span class="quality-item-num">01</span>
+          <h3 class="quality-item-title">Taze Hazırlanır</h3>
+          <p class="quality-item-text">Bekletilmiş ürün yok. Her siparişiniz, teslim anından hemen önce en taze malzemelerle üretilir.</p>
+        </div>
+
+        <div class="quality-item">
+          <span class="quality-item-num">02</span>
+          <h3 class="quality-item-title">Özenle Seçilir</h3>
+          <p class="quality-item-text">Gerçek Belçika çikolatası, günlük meyveler ve nitelikli single-origin kahve çekirdekleri.</p>
+        </div>
+
+        <div class="quality-item">
+          <span class="quality-item-num">03</span>
+          <h3 class="quality-item-title">Rutine Dönüşür</h3>
+          <p class="quality-item-text">Günün yorucu akışında kendinize veya sevdiklerinize ayırdığınız küçük ama kusursuz bir tatlı anı.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ONLINE ORDERING SECTION
+       ========================================================================== -->
+  <section class="order-section" id="order">
+    <div class="container">
+      <div class="order-card-box">
+        <span class="eyebrow">BEŞİKTAŞ & ÇEVRESİ</span>
+        <h2 class="order-title">Canınız çektiyse beklemeyin.</h2>
+        <p class="order-desc">
+          Favori Routine. Roasting tatlınızı ve kahvenizi hemen online sipariş verin, kapınıza gelsin.
+        </p>
+
+        <div class="order-buttons">
+          <!-- Primary CTA: Trendyol Yemek -->
+          <a href="https://www.trendyol.com/yemek" target="_blank" rel="noopener" class="btn btn-trendyol btn-block">
+            Trendyol Yemek'ten Sipariş Ver
+          </a>
+        </div>
+
+        <!-- Secondary Platforms -->
+        <div class="secondary-order-platforms">
+          <a href="https://www.yemeksepeti.com" target="_blank" rel="noopener">Yemeksepeti</a>
+          <span>·</span>
+          <a href="https://getir.com/yemek/" target="_blank" rel="noopener">GetirYemek</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Routine. Roasting</h3>
+          <p>Tatlı rutininiz yeni başlıyor. Beşiktaş merkezli premium tatlı & specialty coffee deneyimi.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Keşfet</h4>
+          <ul>
+            <li><a href="#menu">Menü</a></li>
+            <li><a href="#featured">Öne Çıkanlar</a></li>
+            <li><a href="#coffee">Kahve</a></li>
+            <li><a href="#quality">Konsept</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Sipariş & İletişim</h4>
+          <ul>
+            <li><a href="https://www.trendyol.com/yemek" target="_blank" rel="noopener">Trendyol Yemek</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><span style="opacity:0.8; font-size:0.9rem;">Beşiktaş, İstanbul</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Routine. Roasting. Tüm hakları saklıdır.</p>
+        <p>Designed with a Mobile-First Brand Experience.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MOBILE BOTTOM STICKY ACTION BAR
+       ========================================================================== -->
+  <div class="mobile-sticky-cta">
+    <a href="#menu" class="btn btn-secondary" style="flex: 1; padding: 0.75rem 1rem; font-size: 0.85rem;">
+      Menü
+    </a>
+    <a href="https://www.trendyol.com/yemek" target="_blank" rel="noopener" class="btn btn-trendyol" style="flex: 2; padding: 0.75rem 1rem; font-size: 0.85rem;">
+      Online Sipariş
+    </a>
+  </div>
+
+  <!-- Minimal Smooth Interactions Script -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+
+    menuToggle.addEventListener('click', () => {
+      mobileDrawer.classList.toggle('active');
+      document.body.style.overflow = mobileDrawer.classList.contains('active') ? 'hidden' : '';
+    });
+
+    function closeMenu() {
+      mobileDrawer.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  </script>
+</body>
+</html>
