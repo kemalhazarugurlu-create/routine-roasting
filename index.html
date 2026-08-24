@@ -519,19 +519,28 @@
       gap: 0 50px;
     }
 
-    .menu-item {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 20px;
-      padding: 24px 0;
-      border-bottom: 1px solid var(--line);
-    }
+ .menu-item {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--line);
+}
 
-    .menu-item h4 {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 21px;
-      margin-bottom: 5px;
-    }
+.menu-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.menu-item h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
 
     .menu-item p {
       color: var(--muted);
