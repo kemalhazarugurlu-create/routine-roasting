@@ -25,7 +25,33 @@
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
     rel="stylesheet"
   >
+```css
+/* Routine Crème Signature Rozeti */
+.menu-item-image-wrap {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
 
+.menu-item-image-wrap img {
+  display: block;
+}
+
+.signature-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 4px 7px;
+  background: #241810;
+  color: #f7ead7;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border-radius: 3px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+  
   <style>
     :root {
       --bg: #f7f2e9;
@@ -1842,7 +1868,15 @@
 
     <article class="menu-item menu-item-visual">
       <img
-        src="https://raw.githubusercontent.com/kemalhazarugurlu-create/routine-roasting/refs/heads/routine/Routine%20Creme%20No1.jpeg"
+        ```html
+<div class="menu-item-image-wrap signature-product">
+  <img
+    src="https://raw.githubusercontent.com/kemalhazarugurlu-create/routine-roasting/refs/heads/routine/Routine%20Creme%20No1.jpeg"
+    alt="Routine Crème No: 1"
+    loading="lazy"
+  >
+  <span class="signature-badge">✦ Signature</span>
+</div>
         alt="Routine Crème No: 1"
         loading="lazy"
       >
