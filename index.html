@@ -337,7 +337,69 @@
 
     .favorites {
       background: var(--bg);
-    }
+    } ```css
+/* FAVORİLERİMİZ ÜRÜN DÜZENİ */
+
+.favorites .product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.favorites .product-card {
+  min-width: 0;
+}
+
+.favorites .product-image-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 16px;
+}
+
+.favorites .product-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.favorites .product-name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.favorites .product-name {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.favorites .product-price {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.favorites .product-desc {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .favorites .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .favorites .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+```
 
     .section-heading {
       display: flex;
