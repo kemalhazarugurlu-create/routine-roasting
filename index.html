@@ -1261,6 +1261,59 @@
 @media (max-width: 600px) {
   .favorites {
     padding: 50px
+  /* FAVORILER - YAZI VE GORSEL DUZENI */
+.favorites .product-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: auto;
+  overflow: hidden;
+}
+
+.favorites .product-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  margin-bottom: 14px;
+  flex-shrink: 0;
+}
+
+.favorites .product-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.favorites .product-name-row {
+  position: static;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 0 8px;
+}
+
+.favorites .product-name {
+  position: static;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.favorites .product-price {
+  position: static;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.favorites .product-desc {
+  position: static;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
   </style>
 </head>
 
