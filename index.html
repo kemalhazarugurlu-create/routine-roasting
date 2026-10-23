@@ -333,80 +333,155 @@
       line-height: 1.9;
     }
 
-    /* FAVORITES */
+    /* FAVORITES — görsel kart tasarımı */
 
     .favorites {
-      background: var(--bg);
-    } ```css
-/* FAVORİLERİMİZ ÜRÜN DÜZENİ */
+      background: #efe5d5;
+      padding: 80px 0;
+    }
 
-.favorites .product-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  align-items: start;
-}
+    .favorites .section-heading {
+      display: block;
+      margin-bottom: 36px;
+    }
 
-.favorites .product-card {
-  min-width: 0;
-}
+    .favorites .section-heading-copy {
+      max-width: 100%;
+    }
 
-.favorites .product-image-wrap {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border-radius: 5px;
-  margin-bottom: 16px;
-}
+    .favorites .section-title {
+      font-size: clamp(44px, 5.5vw, 76px);
+      line-height: 1.05;
+      margin: 0;
+    }
 
-.favorites .product-image-wrap img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    .favorites .section-heading > .btn {
+      display: none;
+    }
 
-.favorites .product-name-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
-  margin-top: 14px;
-}
+    .favorites .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 22px;
+    }
 
-.favorites .product-name {
-  font-size: 20px;
-  line-height: 1.3;
-  margin: 0;
-  color: var(--text);
-}
+    .favorites .product-card {
+      position: relative;
+      isolation: isolate;
+      height: 470px;
+      min-width: 0;
+      overflow: hidden;
+      border-radius: 6px;
+      background: #241d18;
+      color: #fff;
+    }
 
-.favorites .product-price {
-  white-space: nowrap;
-  flex-shrink: 0;
-  font-size: 16px;
-  font-weight: 700;
-}
+    .favorites .product-image-wrap {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
 
-.favorites .product-desc {
-  font-size: 14px;
-  line-height: 1.6;
-  margin-top: 8px;
-  color: var(--muted);
-}
+    .favorites .product-image-wrap img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s ease;
+    }
 
-@media (max-width: 900px) {
-  .favorites .product-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
+    .favorites .product-card:hover .product-image-wrap img {
+      transform: scale(1.05);
+    }
 
-@media (max-width: 600px) {
-  .favorites .product-grid {
-    grid-template-columns: 1fr;
-  }
-}
-```
+    .favorites .product-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, .86) 0%,
+        rgba(0, 0, 0, .42) 42%,
+        rgba(0, 0, 0, .02) 100%
+      );
+      pointer-events: none;
+    }
+
+    .favorites .product-name-row {
+      position: absolute;
+      z-index: 2;
+      left: 20px;
+      right: 18px;
+      bottom: 138px;
+      display: block;
+      margin: 0;
+    }
+
+    .favorites .product-name {
+      display: block;
+      color: #fff;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(20px, 1.7vw, 27px);
+      line-height: 1.16;
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, .35);
+    }
+
+    .favorites .product-price {
+      display: none;
+    }
+
+    .favorites .product-desc {
+      position: absolute;
+      z-index: 2;
+      left: 20px;
+      right: 18px;
+      bottom: 18px;
+      margin: 0;
+      color: rgba(255, 255, 255, .92);
+      font-size: 13px;
+      line-height: 1.45;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, .35);
+    }
+
+    @media (max-width: 1050px) {
+      .favorites .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .favorites .product-card {
+        height: 430px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .favorites {
+        padding: 58px 0;
+      }
+
+      .favorites .product-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .favorites .product-card {
+        height: 420px;
+      }
+
+      .favorites .product-name-row {
+        bottom: 150px;
+      }
+
+      .favorites .product-name {
+        font-size: 25px;
+      }
+    }
 
     .section-heading {
       display: flex;
@@ -1135,186 +1210,7 @@
         flex-direction: column;
       }
     }
-  ```css
-/* FAVORİLERİMİZ - YENİ TASARIM */
-
-.favorites {
-  background: #efe5d5;
-  padding: 70px 0;
-}
-
-.favorites .section-heading {
-  display: block;
-  margin-bottom: 38px;
-}
-
-.favorites .section-heading-copy {
-  max-width: 100%;
-}
-
-.favorites .section-title {
-  font-size: clamp(44px, 5.5vw, 76px);
-  line-height: 1.05;
-  margin: 0;
-}
-
-.favorites .product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.favorites .product-card {
-  position: relative;
-  height: 490px;
-  min-width: 0;
-  overflow: hidden;
-  border-radius: 5px;
-  background: #241d18;
-}
-
-.favorites .product-image-wrap {
-  position: absolute;
-  inset: 0;
-  height: 100%;
-  margin: 0;
-}
-
-.favorites .product-image-wrap img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.favorites .product-card:hover .product-image-wrap img {
-  transform: scale(1.05);
-}
-
-.favorites .product-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.85),
-    rgba(0, 0, 0, 0.20) 55%,
-    transparent
-  );
-  pointer-events: none;
-}
-
-.favorites .product-name-row {
-  position: absolute;
-  z-index: 2;
-  left: 22px;
-  right: 18px;
-  bottom: 48px;
-  display: block;
-  margin: 0;
-}
-
-.favorites .product-name {
-  color: #fff;
-  font-size: clamp(20px, 1.8vw, 29px);
-  line-height: 1.15;
-  margin: 0;
-}
-
-.favorites .product-price {
-  display: none;
-}
-
-.favorites .product-desc {
-  position: absolute;
-  z-index: 2;
-  left: 22px;
-  right: 18px;
-  bottom: 17px;
-  margin: 0;
-  color: #fff;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.favorites .section-heading > .btn {
-  display: none;
-}
-
-.favorites .favorites-footer {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 28px;
-}
-
-@media (max-width: 1000px) {
-  .favorites .product-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .favorites .product-card {
-    height: 420px;
-  }
-}
-
-@media (max-width: 600px) {
-  .favorites {
-    padding: 50px
-  /* FAVORILER - YAZI VE GORSEL DUZENI */
-.favorites .product-card {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  height: auto;
-  overflow: hidden;
-}
-
-.favorites .product-image-wrap {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  margin-bottom: 14px;
-  flex-shrink: 0;
-}
-
-.favorites .product-image-wrap img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.favorites .product-name-row {
-  position: static;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
-  margin: 0 0 8px;
-}
-
-.favorites .product-name {
-  position: static;
-  margin: 0;
-  font-size: 20px;
-  line-height: 1.3;
-}
-
-.favorites .product-price {
-  position: static;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.favorites .product-desc {
-  position: static;
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.6;
-}
-  </style>
+</style>
 </head>
 
 <body>
@@ -1335,8 +1231,6 @@
 </a>
 
 <nav class="nav-links" id="navLinks">
-
-      <nav class="nav-links" id="navLinks">
         <a href="#menu">Menü</a>
         <a href="#favorites">Öne Çıkanlar</a>
         <a href="#coffee">Kahve</a>
