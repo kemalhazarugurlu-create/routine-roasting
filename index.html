@@ -1128,6 +1128,132 @@
         flex-direction: column;
       }
     }
+  ```css
+/* FAVORİLERİMİZ - YENİ TASARIM */
+
+.favorites {
+  background: #efe5d5;
+  padding: 70px 0;
+}
+
+.favorites .section-heading {
+  display: block;
+  margin-bottom: 38px;
+}
+
+.favorites .section-heading-copy {
+  max-width: 100%;
+}
+
+.favorites .section-title {
+  font-size: clamp(44px, 5.5vw, 76px);
+  line-height: 1.05;
+  margin: 0;
+}
+
+.favorites .product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.favorites .product-card {
+  position: relative;
+  height: 490px;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #241d18;
+}
+
+.favorites .product-image-wrap {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  margin: 0;
+}
+
+.favorites .product-image-wrap img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.favorites .product-card:hover .product-image-wrap img {
+  transform: scale(1.05);
+}
+
+.favorites .product-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.20) 55%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+.favorites .product-name-row {
+  position: absolute;
+  z-index: 2;
+  left: 22px;
+  right: 18px;
+  bottom: 48px;
+  display: block;
+  margin: 0;
+}
+
+.favorites .product-name {
+  color: #fff;
+  font-size: clamp(20px, 1.8vw, 29px);
+  line-height: 1.15;
+  margin: 0;
+}
+
+.favorites .product-price {
+  display: none;
+}
+
+.favorites .product-desc {
+  position: absolute;
+  z-index: 2;
+  left: 22px;
+  right: 18px;
+  bottom: 17px;
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.favorites .section-heading > .btn {
+  display: none;
+}
+
+.favorites .favorites-footer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 28px;
+}
+
+@media (max-width: 1000px) {
+  .favorites .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .favorites .product-card {
+    height: 420px;
+  }
+}
+
+@media (max-width: 600px) {
+  .favorites {
+    padding: 50px
   </style>
 </head>
 
