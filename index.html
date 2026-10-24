@@ -2694,32 +2694,98 @@
   <!-- =========================================================
        FOOTER
   ========================================================== -->
-<!-- İLETİŞİM FORMU -->
+<!-- İLETİŞİM BÖLÜMÜ -->
 <section class="contact-section" id="contact">
   <div class="contact-container">
 
-    <h2 class="contact-title">İletişim</h2>
+    <!-- SOL TARAF: İLETİŞİM BİLGİLERİ -->
+    <div class="contact-info">
 
-    </p>
+      <p class="contact-eyebrow">BİZİMLE İLETİŞİME GEÇİN</p>
 
-    <form class="contact-form" action="https://formsubmit.co/info@routineroasting.com" method="POST">
-      <input type="hidden" name="_subject" value="Routine Roasting - Yeni İletişim Mesajı">
+      <h2 class="contact-title">Bir merhaba<br>demeye ne dersiniz?</h2>
+
+      <p class="contact-description">
+        Görüş, öneri ve iş birliği talepleriniz için
+        bizimle iletişime geçebilirsiniz.
+      </p>
+
+      <div class="contact-detail">
+        <span class="contact-detail-label">E-POSTA</span>
+        <a href="mailto:info@routineroasting.com">
+          info@routineroasting.com
+        </a>
+      </div>
+
+      <div class="contact-detail">
+        <span class="contact-detail-label">ADRES</span>
+        <p>Beşiktaş, İstanbul</p>
+      </div>
+
+      <a
+        class="contact-map-link"
+        href="https://www.google.com/maps/search/?api=1&query=Routine+Roasting+Beşiktaş+İstanbul"
+        target="_blank"
+        rel="noopener noreferrer">
+        HARİTADA GÖRÜNTÜLE ↗
+      </a>
+
+    </div>
+
+    <!-- SAĞ TARAF: MESAJ FORMU -->
+    <form
+      class="contact-form"
+      action="https://formsubmit.co/info@routineroasting.com"
+      method="POST">
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="Routine Roasting - Yeni İletişim Mesajı">
+
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
 
+      <h3 class="contact-form-heading">Bize bir mesaj yazın</h3>
+
       <div class="contact-form-row">
-        <input type="text" name="Ad Soyad" placeholder="Ad Soyad" required>
-        <input type="tel" name="Telefon" placeholder="Telefon numarası">
+        <input
+          type="text"
+          name="Ad Soyad"
+          placeholder="Ad Soyad"
+          autocomplete="name"
+          required>
+
+        <input
+          type="tel"
+          name="Telefon"
+          placeholder="Telefon numarası"
+          autocomplete="tel">
       </div>
 
-      <input type="email" name="email" placeholder="E-posta adresiniz" required>
+      <input
+        type="email"
+        name="email"
+        placeholder="E-posta adresiniz"
+        autocomplete="email"
+        required>
 
-      <textarea name="Mesaj" placeholder="Mesajınız" rows="6" required></textarea>
+      <textarea
+        name="Mesaj"
+        placeholder="Size nasıl yardımcı olabiliriz?"
+        rows="5"
+        required></textarea>
 
-      <button type="submit" class="contact-button">GÖNDER →</button>
+      <button type="submit" class="contact-button">
+        GÖNDER →
+      </button>
+
+      <p class="contact-note">
+        Mesajınız bizim için değerli. En kısa sürede size dönüş yapacağız.
+      </p>
+
     </form>
 
-    </p>
   </div>
 </section>
   <footer class="footer">
