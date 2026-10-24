@@ -1242,7 +1242,102 @@
     font-weight: 400;
     line-height: 1.6;
 }
-</style>
+/* ROUTINE ROASTING — CONTACT SECTION */
+.contact-section {
+  padding: 76px 20px 84px;
+  background: var(--bg, #f7f2e9);
+}
+
+.contact-container {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 48px 32px;
+  border: 1px solid rgba(23, 19, 15, 0.14);
+  background: var(--paper, #fffdf9);
+}
+
+.contact-eyebrow {
+  margin: 0 0 14px;
+  color: var(--brown, #3a291f);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.contact-title {
+  margin: 0 0 16px;
+  color: var(--ink, #17130f);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.contact-description {
+  max-width: 500px;
+  margin: 0 auto 28px;
+  color: var(--muted, #6c6258);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.contact-email {
+  display: inline-block;
+  margin-bottom: 26px;
+  color: var(--brown, #3a291f);
+  font-size: clamp(16px, 2vw, 19px);
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-email:hover {
+  opacity: 0.7;
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 30px;
+  background: var(--ink, #17130f);
+  color: #fffdf9;
+  border: 1px solid var(--ink, #17130f);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.contact-button:hover {
+  background: transparent;
+  color: var(--ink, #17130f);
+}
+
+.contact-note {
+  margin: 22px 0 0;
+  color: var(--muted, #6c6258);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 48px 16px 56px;
+  }
+
+  .contact-container {
+    padding: 36px 20px;
+  }
+
+  .contact-description {
+    font-size: 14px;
+  }
+}
+</style> 
 </head>
 
 <body>
@@ -2454,8 +2549,12 @@
             </a>
 
             <a href="#contact">
-              İletişim
-            </a>
+  İletişim
+</a>
+
+<a href="mailto:info@routineroasting.com">
+  E-posta Gönder
+</a>
 
           </div>
 
