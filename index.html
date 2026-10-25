@@ -668,11 +668,17 @@
     }
 .menu-item {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 90px;
+  grid-template-columns: 80px minmax(0, 1fr) auto;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
   padding: 24px 0;
   border-bottom: 1px solid var(--line);
+}
+
+/* Sadece sıcak kahveler */
+#hot-coffee .menu-item {
+  grid-template-columns: minmax(0, 1fr) 90px;
+  gap: 24px;
 }
 
 .menu-item-image {
