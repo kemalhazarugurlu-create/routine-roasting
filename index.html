@@ -666,14 +666,13 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 0 50px;
     }
-
- .menu-item {
-    display: grid;
-    grid-template-columns: 80px 1fr auto;
-    align-items: center;
-    gap: 16px;
-    padding: 24px 0;
-    border-bottom: 1px solid var(--line);
+.menu-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 90px;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .menu-item-image {
@@ -697,10 +696,12 @@
     }
 
     .menu-item-price {
-      font-weight: 800;
-      font-size: 15px;
-      padding-top: 3px;
-    }
+  min-width: 90px;
+  text-align: left;
+  white-space: nowrap;
+  font-weight: 700;
+  flex-shrink: 0;
+}
 
     /* COFFEE FEATURE */
 
@@ -2208,10 +2209,10 @@
               <div>
                 <h4>Espresso</h4>
                 <p>
-                  Yoğun ve dengeli single-origin espresso.
+                  Yoğun ve dengeli double espresso.
                 </p>
               </div>
-              <span class="menu-item-price">₺110</span>
+              <span class="menu-item-price">₺130</span>
             </article>
 
 
