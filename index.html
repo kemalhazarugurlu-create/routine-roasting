@@ -1680,11 +1680,14 @@
 .google-review-link:hover {
   color: #191611;
 }
-  /* GOOGLE PUAN ROZETİ */
+/* GOOGLE PUAN ROZETİ */
 .google-rating-wrapper {
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
-  padding: 24px 20px;
+  align-items: center;
+  padding: 24px 16px;
   background: #fffdf9;
 }
 
@@ -1693,19 +1696,16 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 14px 24px;
+  box-sizing: border-box;
+  padding: 14px 26px;
   border-radius: 50px;
-  background: #fff5df;
+  background: #fff4dc;
   color: #191611;
   text-decoration: none;
   font-family: inherit;
   font-size: 18px;
   line-height: 1.3;
-  transition: transform 0.2s ease;
-}
-
-.google-rating-badge:hover {
-  transform: translateY(-1px);
+  white-space: nowrap;
 }
 
 .google-rating-name {
@@ -1713,13 +1713,14 @@
 }
 
 .google-rating-stars {
-  color: #f9ab00;
+  color: #f9ab00 !important;
   letter-spacing: 1px;
   font-size: 22px;
   white-space: nowrap;
 }
 
 .google-rating-score {
+  color: #191611;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -1733,7 +1734,6 @@
 
   .google-rating-stars {
     font-size: 18px;
-    letter-spacing: 0;
   }
 }
 </style> 
